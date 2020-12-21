@@ -3,6 +3,7 @@
   "version": "3.0.0",
   "license": "MIT",
   "dependencies": {
+    "@tailwindcss/typography": "^0.3.1",
     "next": "^10.0.3",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
