@@ -1,25 +1,20 @@
 import Header from "../components/header";
 import Spacer from "../components/spacer";
 import Alert from "../components/alert";
+import Navigation from "../components/navigation";
+import HomeBox from "../components/homeBox";
 
 export default () => (
   <div className="container mx-auto p-4 border-t-8 border-blue-500 border-solid">
     <Header />
     <Spacer border size="large" />
     <Alert title="COVID-19 Information">
-        Click here for an important message related to Coronavirus (COVID-19)
-        and patients of Drs. Roth, Rotter and Laster
+      Click here for an important message related to Coronavirus (COVID-19) and
+      patients of Drs. Roth, Rotter and Laster
     </Alert>
     <Spacer />
     <div className="flex justify-between">
-      <ul>
-        <li>Home</li>
-        <li>About Us</li>
-        <li>Appointments</li>
-        <li>How to Reach your Pediatrician</li>
-        <li>Emergencies &amp; After Hours</li>
-        <li>New Patient Information</li>
-      </ul>
+      <Navigation />
       <div className="max-w-prose">
         <img
           className="w-full ring ring-gray-700 rounded-lg"
@@ -50,34 +45,19 @@ export default () => (
         </div>
         <Spacer />
         <div className="flex space-x-4">
-          <div className="rounded ring ring-blue-300 flex-shrink w-1/2">
-            <div className="bg-blue-200 p-2 font-bold text-lg rounded-tl rounded-tr">
-              Flu Clinic 2020
-            </div>
-            <div className="p-2 prose-sm">
-              <p className="my-0 text-sm">
-                We are happy to let you know that we will begin a series of
-                multiple flu vaccine clinics starting in September. We will
-                notify you about your child's scheduled day and time. We will
-                have ample supply of vaccines and will offer clinics throughout
-                September, October, and November until 100% of our patients are
-                vaccinated.
-              </p>
-            </div>
-          </div>
-          <div className="rounded ring ring-blue-300 flex-shrink  w-1/2">
-            <div className="bg-blue-200 p-2 font-bold  text-lg">
-              Welcome to our Office!
-            </div>
-            <div className="p-2 prose-sm">
-              <p className="my-0 text-sm">
-                New to the area? Looking for a new pediatrician? Expecting a new
-                baby? We are thrilled to welcome new patients into our practice!
-                Please call our office at (617) 232-2811 to arrange for a visit.
-                Our staff is here and ready to help you.
-              </p>
-            </div>
-          </div>
+          <HomeBox title="Flu Clinic 2020">
+            We are happy to let you know that we will begin a series of multiple
+            flu vaccine clinics starting in September. We will notify you about
+            your child's scheduled day and time. We will have ample supply of
+            vaccines and will offer clinics throughout September, October, and
+            November until 100% of our patients are vaccinated.
+          </HomeBox>
+          <HomeBox title="Welcome to our Office!">
+            New to the area? Looking for a new pediatrician? Expecting a new
+            baby? We are thrilled to welcome new patients into our practice!
+            Please call our office at (617) 232-2811 to arrange for a visit. Our
+            staff is here and ready to help you.
+          </HomeBox>
         </div>
         <Spacer />
         <img
