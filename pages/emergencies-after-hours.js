@@ -1,6 +1,7 @@
 import Container from "../components/container";
 import ReactMarkdown from "react-markdown";
 import Alert from "../components/alert";
+import Address from "../components/address";
 
 const markdownContent = `
 If you would like to reach the on call physician about an urgent matter that
@@ -21,26 +22,16 @@ child or who works closely with your child’s pediatrician.
 
 For weekend appointments your child will be seen in our office or in the
 Newton office of our weekend covering group.
-
-Our office address is:
-
-637 Washington Street  
-Suite 202  
-Brookline, MA 02446  
-617-232-2811  
-
-The office of our weekend covering group in Newton Centre is:
-
-Drs. Jonathan Benjamin, Roger Spingarn, and Elissa Rottenberg  
-1400 Centre Street  
-Newton MA 02459  
-617-232-2811
 `;
 
 export default () => (
   <Container>
     <div className="prose mb-6"><h1>Emergencies &amp; After Hours</h1></div>
     <Alert>If your child is experiencing a life-threatening emergency, please call 911 or go to your nearest Emergency Room.</Alert>
-    <ReactMarkdown className="mt-5 prose">{markdownContent}</ReactMarkdown>
+    <ReactMarkdown className="my-5 prose">{markdownContent}</ReactMarkdown>
+    <p>Our office address is:</p>
+    <Address />
+    <p>The office of our weekend covering group in Newton Centre is:</p>
+    <Address covering />
   </Container>
 );

@@ -38,11 +38,6 @@ export default () => (
     <div className="prose">
       <h1>About the office</h1>
       <p>Welcome to the office of Drs. Roth, Rotter, and Laster.</p>
-      <p>
-        To reach your child's pediatrician please call our office at
-        617-232-2811. Our staff will make an appointment for you or ensure your
-        child’s pediatrician calls you back as soon as possible.
-      </p>
     </div>
     <Profile
       name="Sally S. Roth, MD"

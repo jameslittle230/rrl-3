@@ -1,9 +1,23 @@
 import Container from "../components/container";
 import ReactMarkdown from "react-markdown";
-import Alert from "../components/alert";
+
+const Resource = (props) => (
+  <a
+    href={props.url}
+    className={`block p-4 rounded-xl
+  border-4 border-gray-500 border-solid`}
+  >
+    <div className=""></div>
+    <div className="">
+      <p className="text-lg font-semibold">{props.name} →</p>
+      <p className="text-sm text-gray-600">{props.subtitle}</p>
+      {props.children ? <p className="mt-4">{props.children}</p> : null}
+    </div>
+  </a>
+);
 
 const markdownContent = `
-# Forms & Rseources
+# Forms & Resources
 
 In this section you will find information about specific medical advice for
 basic problems, information about your child’s well visit form, and
@@ -32,11 +46,36 @@ addressed, stamped envelope and allow 5-7 business days for completion.
 
 There is a charge to provide you with extra copies of your child’s health
 form.
-`
+`;
 
 export default () => (
   <Container>
     <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+    <div className="grid grid-cols-1 gap-2">
+      <Resource
+        url="https://files.rothrotterlaster.com/whatever.pdf"
+        name="Fever"
+        subtitle="25 MB"
+      />
+      <Resource
+        url="https://files.rothrotterlaster.com/whatever.pdf"
+        name="Vomiting and Diarrhea"
+        subtitle="25 MB"
+      />
+      <Resource
+        url="https://files.rothrotterlaster.com/whatever.pdf"
+        name="How to Prevent Stomach Bugs"
+        subtitle="25 MB"
+      />
+      <Resource
+        url="https://files.rothrotterlaster.com/whatever.pdf"
+        name="Dosing for over-the-counter medications"
+        subtitle="25 MB"
+      >
+        Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
+        (Diphenhydramine)
+      </Resource>
+    </div>
     <ReactMarkdown className="prose">{wellVisitContent}</ReactMarkdown>
   </Container>
 );
