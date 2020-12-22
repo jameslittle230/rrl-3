@@ -1,7 +1,7 @@
 export default () => (
   <div className="flex justify-between">
     <div>
-      <h1 className="text-blue-600 font-serif text-4xl font-extrabold mb-2">
+      <h1 className="text-blue-600 font-serif text-5xl font-extrabold mb-2">
         Drs. Roth, Rotter, and Laster
       </h1>
       <div className="text-lg">
@@ -14,7 +14,12 @@ export default () => (
     <div>
       <a
         href="https://mychart.chppoc.org/rrl"
-        className="rounded-lg px-5 py-3 ring-inset ring inline-block bg-blue-100 font-bold text-blue-900"
+        className={`rounded-lg px-5 py-3 
+        border-solid border-2 border-blue-400
+        inline-block 
+        bg-gradient-to-b from-blue-100 to-blue-200
+        hover:from-blue-50
+        font-bold text-blue-900`}
       >
         Patient Portal Login →
       </a>

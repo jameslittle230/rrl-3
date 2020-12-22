@@ -6,7 +6,8 @@
     "@tailwindcss/typography": "^0.3.1",
     "next": "^10.0.3",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "react-markdown": "^5.0.3"
   },
   "devDependencies": {
     "postcss": "^8.2.1",

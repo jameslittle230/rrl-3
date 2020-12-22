@@ -1,15 +1,65 @@
 import Container from "../components/container";
 import Spacer from "../components/spacer";
 import Alert from "../components/alert";
-import HomeBox from "../components/homeBox";
+import Link from "next/link";
+import ReactMarkdown from "react-markdown";
+
+const markdownContent = `
+Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
+pediatricians in a small, private practice in Brookline, Massachusetts
+and we are dedicated to taking excellent and personal care of our
+patients. We are all Board Certified by the American Board of
+Pediatrics. We are affiliated with Boston Children's Hospital and are
+proud members of the PPOC (Pediatric Physicians Organization at
+Children's), Boston Children's Hospital's only preferred primary care
+provider network. 
+
+## Why choose us? 
+
+Our patients choose us because they
+know they will get excellent medical care in a personalized office. We
+have access to the most up to date pediatric information in the country
+through our strong affiliation with Boston Children’s Hospital, and in
+our intimate office setting we can easily maintain close, long term
+health relationships with our families.`;
+
+const HomeBox = (props) => (
+  <div className="rounded ring ring-blue-300 flex-shrink w-1/2">
+    <div className="bg-blue-200 p-3 font-bold text-lg rounded-tl rounded-tr">
+      {props.title}
+    </div>
+    <div className="p-3 prose-sm">
+      <p className="my-0">{props.children}</p>
+    </div>
+  </div>
+);
 
 export default () => (
   <Container
     belowHeader={
       <>
-        <Alert title="COVID-19 Information">
-          Click here for an important message related to Coronavirus (COVID-19)
-          and patients of Drs. Roth, Rotter and Laster
+        <Alert
+          title="COVID-19 Information"
+          endContent={
+            <Link href="/covid19">
+              <p
+                className={`
+                border-solid border-2 border-red-500 
+                py-2 px-4
+                bg-gradient-to-b from-red-200 to-red-300 
+                text-red-800 font-bold
+                rounded
+                hover:from-red-100 cursor-pointer`}
+              >
+                Visit the COVID-19 Page →
+              </p>
+            </Link>
+          }
+        >
+          COVID-19 continues to be a significant danger to those in the
+          Brookline Community. Our COVID-19 Guidelines page has up-to-date
+          medical advice from the Massachusetts Department of Health and the
+          Center for Disease Control.
         </Alert>
         <Spacer />
       </>
@@ -22,27 +72,7 @@ export default () => (
         alt=""
       />
       <Spacer />
-      <div className="prose">
-        <p>
-          Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
-          pediatricians in a small, private practice in Brookline, Massachusetts
-          and we are dedicated to taking excellent and personal care of our
-          patients. We are all Board Certified by the American Board of
-          Pediatrics. We are affiliated with Boston Children's Hospital and are
-          proud members of the PPOC (Pediatric Physicians Organization at
-          Children's), Boston Children's Hospital's only preferred primary care
-          provider network.
-        </p>
-        <h2>Why choose us?</h2>
-        <p>
-          Our patients choose us because they know they will get excellent
-          medical care in a personalized office. We have access to the most up
-          to date pediatric information in the country through our strong
-          affiliation with Boston Children’s Hospital, and in our intimate
-          office setting we can easily maintain close, long term health
-          relationships with our families.
-        </p>
-      </div>
+      <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
       <Spacer />
       <div className="flex space-x-4">
         <HomeBox title="Flu Clinic 2020">
@@ -59,12 +89,6 @@ export default () => (
           and ready to help you.
         </HomeBox>
       </div>
-      <Spacer />
-      <img
-        className="w-80 mx-auto ring ring-gray-200"
-        src="https://rothrotterlaster.com/static/fc1d97dbc0967de6a3399f42f5af3223/a6173/ppoc.jpg"
-        alt=""
-      />
     </>
   </Container>
 );

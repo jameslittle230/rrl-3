@@ -1,0 +1,41 @@
+import Container from "../components/container";
+import ReactMarkdown from "react-markdown";
+import Alert from "../components/alert";
+
+const markdownContent = `
+# Referrals
+
+There are two kinds of referrals:
+
+**Medical Referral:**  
+This means that your pediatrician will recommend that your child see a
+specialist for a particular medical problem and help arrange the appointment.
+
+**Insurance Referral:**  
+This is the process that our office staff undertakes to ensure that the
+specialist visit is covered by your insurance company.
+
+## Medical Referral
+Please speak with your child's physician before making an appointment with a
+specialist since there are many conditions we can easily treat in our office.
+
+If you need to see a specialist, please call our office and we will assist
+you in setting up a specialist appointment.
+## Insurance Referral
+If your child needs to see a specialist, your insurance company may require a
+referral number prior to the visit. Once you have made the appointment with
+the specialist, please contact our office with the following information:
+
+- Your child's name, date of birth, and insurance policy information 
+- Name of the physician specialist who will be seeing your child 
+- The date of the specialist appointment 
+- The NPI (National Provider Identifier) number of the specialist. The
+specialist's office will tell you that number, so ask for the NPI number when
+you make the appointment.
+`;
+
+export default () => (
+  <Container>
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+  </Container>
+);
