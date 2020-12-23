@@ -10,8 +10,8 @@ the link to find hands on strategies for many stressful situations that
 parents and patients confront. And as always, we are here to help.
 `;
 
-export default () => (
-  <Container>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
+const EmotionalHealth = () => <Container>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+</Container>;
+
+export default EmotionalHealth;

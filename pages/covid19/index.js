@@ -84,11 +84,11 @@ The sick person stays completely away in a separate room from anyone who is
 not sick. All family members are masked.
 `;
 
-export default () => (
-  <Container>
-    <p className="text-sm uppercase text-gray-600 mb-6">
-      Last updated on 2020-12-21
-    </p>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
+const Index = () => <Container>
+  <p className="text-sm uppercase text-gray-600 mb-6">
+    Last updated on 2020-12-21
+  </p>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+</Container>;
+
+export default Index;

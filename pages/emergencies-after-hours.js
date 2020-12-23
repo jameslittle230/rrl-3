@@ -24,14 +24,14 @@ For weekend appointments your child will be seen in our office or in the
 Newton office of our weekend covering group.
 `;
 
-export default () => (
-  <Container>
-    <div className="prose mb-6"><h1>Emergencies &amp; After Hours</h1></div>
-    <Alert>If your child is experiencing a life-threatening emergency, please call 911 or go to your nearest Emergency Room.</Alert>
-    <ReactMarkdown className="my-5 prose">{markdownContent}</ReactMarkdown>
-    <p>Our office address is:</p>
-    <Address />
-    <p>The office of our weekend covering group in Newton Centre is:</p>
-    <Address covering />
-  </Container>
-);
+const EmergenciesAfterHours = () => <Container>
+  <div className="prose mb-6"><h1>Emergencies &amp; After Hours</h1></div>
+  <Alert>If your child is experiencing a life-threatening emergency, please call 911 or go to your nearest Emergency Room.</Alert>
+  <ReactMarkdown className="my-5 prose">{markdownContent}</ReactMarkdown>
+  <p>Our office address is:</p>
+  <Address />
+  <p>The office of our weekend covering group in Newton Centre is:</p>
+  <Address covering />
+</Container>;
+
+export default EmergenciesAfterHours;

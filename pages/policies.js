@@ -39,8 +39,8 @@ ready to help you. While we cannot waive fees, we can always set up a monthly
 payment plan should the need arise.
 `;
 
-export default () => (
-  <Container>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
+const Policies = () => <Container>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+</Container>;
+
+export default Policies;

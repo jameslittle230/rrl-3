@@ -24,8 +24,8 @@ telephone.
 or go to your nearest Emergency Room.**
 `;
 
-export default () => (
-  <Container>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
+const HowToReach = () => <Container>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+</Container>;
+
+export default HowToReach;

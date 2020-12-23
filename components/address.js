@@ -1,4 +1,4 @@
-export default (props) => {
+const Address = props => {
   const data = {
     default: {
       addressLines: [
@@ -47,3 +47,5 @@ export default (props) => {
     </div>
   );
 };
+
+export default Address;

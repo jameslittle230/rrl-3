@@ -1,4 +1,4 @@
-export default (props) => {
+const Spacer = props => {
   const classNames = [
     "w-full",
     (props.border ? "h-0.5 bg-black bg-opacity-20" : ""),
@@ -9,3 +9,5 @@ export default (props) => {
     <div className={classNames}>&nbsp;</div>
   );
 };
+
+export default Spacer;

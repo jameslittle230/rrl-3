@@ -53,7 +53,7 @@ const navItems = [
   { href: "/referrals", title: "Referrals" },
 ];
 
-export default () => {
+const Navigation = () => {
   const navItemElements = navItems.map((item) => (
     <NavItem href={item.href} title={item.title}>
       {item.children
@@ -65,3 +65,5 @@ export default () => {
   ));
   return <ul className="flex-shrink-0">{navItemElements}</ul>;
 };
+
+export default Navigation;

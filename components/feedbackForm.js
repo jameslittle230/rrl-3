@@ -38,7 +38,7 @@ const statusBank = {
   },
 };
 
-export default () => {
+const FeedbackForm = () => {
   const router = useRouter();
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState({});
@@ -87,3 +87,5 @@ export default () => {
     </form>
   );
 };
+
+export default FeedbackForm;

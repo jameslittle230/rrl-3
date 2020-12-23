@@ -34,8 +34,8 @@ specialist's office will tell you that number, so ask for the NPI number when
 you make the appointment.
 `;
 
-export default () => (
-  <Container>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
+const Referrals = () => <Container>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+</Container>;
+
+export default Referrals;

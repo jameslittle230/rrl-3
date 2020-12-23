@@ -34,61 +34,61 @@ const HomeBox = (props) => (
   </div>
 );
 
-export default () => (
-  <Container
-    belowHeader={
-      <>
-        <Alert
-          title="COVID-19 Information"
-          endContent={
-            <Link href="/covid19">
-              <p
-                className={`
-                border-solid border-2 border-red-500 
-                py-2 px-4
-                bg-gradient-to-b from-red-200 to-red-300 
-                text-red-800 font-bold
-                rounded
-                hover:from-red-100 cursor-pointer`}
-              >
-                Visit the COVID-19 Page →
-              </p>
-            </Link>
-          }
-        >
-          COVID-19 continues to be a significant danger to those in the
-          Brookline Community. Our COVID-19 Guidelines page has up-to-date
-          medical advice from the Massachusetts Department of Health and the
-          Center for Disease Control.
-        </Alert>
-        <Spacer />
-      </>
-    }
-  >
+const Index = () => <Container
+  belowHeader={
     <>
-      <img
-        className="w-full ring ring-gray-700 rounded-lg"
-        src="https://rothrotterlaster.com/static/359dd930e6d4c10c8bca4c8e7b53d182/4fe8c/building-c.jpg"
-        alt=""
-      />
+      <Alert
+        title="COVID-19 Information"
+        endContent={
+          <Link href="/covid19">
+            <p
+              className={`
+              border-solid border-2 border-red-500 
+              py-2 px-4
+              bg-gradient-to-b from-red-200 to-red-300 
+              text-red-800 font-bold
+              rounded
+              hover:from-red-100 cursor-pointer`}
+            >
+              Visit the COVID-19 Page →
+            </p>
+          </Link>
+        }
+      >
+        COVID-19 continues to be a significant danger to those in the
+        Brookline Community. Our COVID-19 Guidelines page has up-to-date
+        medical advice from the Massachusetts Department of Health and the
+        Center for Disease Control.
+      </Alert>
       <Spacer />
-      <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-      <Spacer />
-      <div className="flex space-x-4">
-        <HomeBox title="Flu Clinic 2020">
-          We are happy to let you know that we will begin a series of multiple
-          flu vaccine clinics starting in September. We will notify you about
-          your child's scheduled day and time. We will have ample supply of
-          vaccines and will offer clinics throughout September, October, and
-          November until 100% of our patients are vaccinated.
-        </HomeBox>
-        <HomeBox title="Welcome to our Office!">
-          New to the area? Looking for a new pediatrician? Expecting a new baby?
-          We are thrilled to welcome new patients into our practice! Please call
-          our office at (617) 232-2811 to arrange for a visit. Our staff is here
-          and ready to help you.
-        </HomeBox>
-      </div>
     </>
-  </Container>
-);
+  }
+>
+  <>
+    <img
+      className="w-full ring ring-gray-700 rounded-lg"
+      src="https://rothrotterlaster.com/static/359dd930e6d4c10c8bca4c8e7b53d182/4fe8c/building-c.jpg"
+      alt=""
+    />
+    <Spacer />
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+    <Spacer />
+    <div className="flex space-x-4">
+      <HomeBox title="Flu Clinic 2020">
+        We are happy to let you know that we will begin a series of multiple
+        flu vaccine clinics starting in September. We will notify you about
+        your child's scheduled day and time. We will have ample supply of
+        vaccines and will offer clinics throughout September, October, and
+        November until 100% of our patients are vaccinated.
+      </HomeBox>
+      <HomeBox title="Welcome to our Office!">
+        New to the area? Looking for a new pediatrician? Expecting a new baby?
+        We are thrilled to welcome new patients into our practice! Please call
+        our office at (617) 232-2811 to arrange for a visit. Our staff is here
+        and ready to help you.
+      </HomeBox>
+    </div>
+  </>
+</Container>;
+
+export default Index;

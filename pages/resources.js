@@ -48,34 +48,34 @@ There is a charge to provide you with extra copies of your child’s health
 form.
 `;
 
-export default () => (
-  <Container>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-    <div className="grid grid-cols-1 gap-2">
-      <Resource
-        url="https://files.rothrotterlaster.com/whatever.pdf"
-        name="Fever"
-        subtitle="25 MB"
-      />
-      <Resource
-        url="https://files.rothrotterlaster.com/whatever.pdf"
-        name="Vomiting and Diarrhea"
-        subtitle="25 MB"
-      />
-      <Resource
-        url="https://files.rothrotterlaster.com/whatever.pdf"
-        name="How to Prevent Stomach Bugs"
-        subtitle="25 MB"
-      />
-      <Resource
-        url="https://files.rothrotterlaster.com/whatever.pdf"
-        name="Dosing for over-the-counter medications"
-        subtitle="25 MB"
-      >
-        Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
-        (Diphenhydramine)
-      </Resource>
-    </div>
-    <ReactMarkdown className="prose">{wellVisitContent}</ReactMarkdown>
-  </Container>
-);
+const Resources = () => <Container>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+  <div className="grid grid-cols-1 gap-2">
+    <Resource
+      url="https://files.rothrotterlaster.com/whatever.pdf"
+      name="Fever"
+      subtitle="25 MB"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/whatever.pdf"
+      name="Vomiting and Diarrhea"
+      subtitle="25 MB"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/whatever.pdf"
+      name="How to Prevent Stomach Bugs"
+      subtitle="25 MB"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/whatever.pdf"
+      name="Dosing for over-the-counter medications"
+      subtitle="25 MB"
+    >
+      Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
+      (Diphenhydramine)
+    </Resource>
+  </div>
+  <ReactMarkdown className="prose">{wellVisitContent}</ReactMarkdown>
+</Container>;
+
+export default Resources;

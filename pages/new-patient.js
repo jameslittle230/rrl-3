@@ -16,8 +16,8 @@ On the day of your appointment, please fill out and bring three forms:
 3. General Consent Form
 `;
 
-export default () => (
-  <Container>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
+const NewPatient = () => <Container>
+  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+</Container>;
+
+export default NewPatient;
