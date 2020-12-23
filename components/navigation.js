@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Icon from "./icon";
 
 const NavItem = (props) => {
   const router = useRouter();
@@ -20,11 +21,19 @@ const NavItem = (props) => {
 
   return (
     <li>
-      <p className={classNames}><Link href={props.href}>
-        {props.title}
-      </Link></p>
+      <p className={classNames}>
+        {props.href.startsWith("/") ? (
+          <Link href={props.href}>{props.title}</Link>
+        ) : (
+          <a href={props.href}>
+            {props.title} <Icon icon="arrow.up.right.square" />
+          </a>
+        )}
+      </p>
       {props.children && isCurrentPageOrChild ? (
-        <ul className="ml-4 pl-2 border-l-4 border-gray-200">{props.children}</ul>
+        <ul className="ml-4 pl-2 border-l-4 border-gray-200">
+          {props.children}
+        </ul>
       ) : null}
     </li>
   );
@@ -40,10 +49,11 @@ const navItems = [
       {
         href: "/covid19/emotional-health",
         title: "Emotional Wellbeing",
-      }
+      },
     ],
   },
   { href: "/appointments", title: "Appointments" },
+  { href: "https://google.com", title: "Google" },
   { href: "/how-to-reach", title: "How to Reach your Pediatrician" },
   { href: "/emergencies-after-hours", title: "Emergencies & After Hours" },
   { href: "/new-patient", title: "New Patient Information" },
@@ -53,17 +63,21 @@ const navItems = [
   { href: "/referrals", title: "Referrals" },
 ];
 
-const Navigation = () => {
-  const navItemElements = navItems.map((item) => (
+const listNavItems = (items) => {
+  return items.map((item) => (
     <NavItem href={item.href} title={item.title}>
-      {item.children
-        ? item.children.map((subItem) => (
-            <NavItem href={subItem.href} title={subItem.title} />
-          ))
-        : null}
+      {item.children ? listNavItems(item.children) : null}
     </NavItem>
   ));
-  return <ul className="flex-shrink-0">{navItemElements}</ul>;
+};
+
+const Navigation = () => {
+  const navItemElements = listNavItems(navItems);
+  return (
+    <div className="flex-shrink-0">
+      <ul>{navItemElements}</ul>
+    </div>
+  );
 };
 
 export default Navigation;

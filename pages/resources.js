@@ -1,13 +1,15 @@
 import Container from "../components/container";
+import Icon from "../components/icon"
 import ReactMarkdown from "react-markdown";
 
 const Resource = (props) => (
   <a
     href={props.url}
     className={`block p-4 rounded-xl
-  border-4 border-gray-500 border-solid`}
+  border-4 border-gray-500 border-solid
+  flex space-x-4`}
   >
-    <div className=""></div>
+    <div className="flex-shrink text-4xl"><Icon icon="doc.text" /></div>
     <div className="">
       <p className="text-lg font-semibold">{props.name} →</p>
       <p className="text-sm text-gray-600">{props.subtitle}</p>
@@ -69,10 +71,9 @@ const Resources = () => <Container>
     <Resource
       url="https://files.rothrotterlaster.com/whatever.pdf"
       name="Dosing for over-the-counter medications"
-      subtitle="25 MB"
+      subtitle="25 MB • Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
+      (Diphenhydramine)"
     >
-      Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
-      (Diphenhydramine)
     </Resource>
   </div>
   <ReactMarkdown className="prose">{wellVisitContent}</ReactMarkdown>
