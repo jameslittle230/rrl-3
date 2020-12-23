@@ -43,6 +43,8 @@ export default () => {
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState({});
 
+  const NBSP_CHAR_CODE = 160;
+
   const submitForm = () => {
     if (message.length > 0) {
       setMessage("");
@@ -80,7 +82,7 @@ export default () => {
         Send
       </button>
       <p className={`text-xs text-${status.color || "gray"}-400`}>
-        {status.message || String.fromCharCode(160)}
+        {status.message || String.fromCharCode(NBSP_CHAR_CODE)}
       </p>
     </form>
   );
