@@ -4,21 +4,15 @@ import { useEffect } from "react";
 export default () => {
   const name = "federalist";
 
-  useEffect(() => {
-    if (stork) {
-      stork.register(
-        "federalist",
-        "https://files.stork-search.net/federalist.st",
-        {
+  useEffect(
+    () => {
+      if (stork) {
+        stork.register(name, "https://files.stork-search.net/federalist.st", {
           showProgress: false,
-          onResultSelected: (result) => {
-            console.log(result)
-          }
-        }
-      );
-    }
-  },
-  [] // Don't rerun on props change
+        });
+      }
+    },
+    [] // Don't rerun on props change
   );
 
   return (
@@ -31,7 +25,11 @@ export default () => {
         <script src="https://files.stork-search.net/stork.js"></script>
       </Head>
       <div className="stork-wrapper">
-        <input data-stork={name} className="stork-input" placeholder="Search the site" />
+        <input
+          data-stork={name}
+          className="stork-input"
+          placeholder="Search the site"
+        />
         <div data-stork={`${name}-output`} className="stork-output"></div>
       </div>
     </div>

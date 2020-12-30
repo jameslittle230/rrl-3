@@ -34,7 +34,7 @@ const Address = (props) => {
     <div className="border-gray-300 border-4 border-solid rounded-xl grid grid-cols-2 my-4">
       <div className="border-gray-300 border-r-4 border-solid p-4 row-span-2 leading-snug font-bold">
         {datumToUse.addressLines.map((line) => (
-          <p>{line}</p>
+          <p key="line">{line}</p>
         ))}
       </div>
       <a

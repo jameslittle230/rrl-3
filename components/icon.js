@@ -11,8 +11,6 @@ export default (props) => {
     "doc.text": <DocText />,
   };
 
-  console.log(MappinCircleFill);
-
   if (!icons[props.icon]) {
     throw new Error(`Cannot find icon \`${props.icon}\`!`);
   }

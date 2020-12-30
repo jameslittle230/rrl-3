@@ -18,8 +18,6 @@ const Button = (props) => {
   const internalLink = props.href.startsWith("/");
   const notALink = !props.href && props.onClick;
 
-  console.log(externalLink, internalLink, notALink);
-
   if (externalLink) {
     return (
       <a href={props.href} className={className}>

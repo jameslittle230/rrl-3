@@ -18,7 +18,7 @@ export default (props) => (
         <div className="hidden md:block flex-shrink-0 mr-4">
           <Navigation />
         </div>
-        <div className="">{props.children}</div>
+        <div className="w-full" id="stork-content">{props.children}</div>
       </div>
     </div>
     <Footer />
