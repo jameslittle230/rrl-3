@@ -1,4 +1,4 @@
-const Address = props => {
+const Address = (props) => {
   const data = {
     default: {
       addressLines: [
@@ -28,6 +28,8 @@ const Address = props => {
 
   const datumToUse = props.covering ? data.covering : data.default;
 
+  const linkClassNames = `block p-4 hover:bg-gray-100 rounded-r-lg`;
+
   return (
     <div className="border-gray-300 border-4 border-solid rounded-xl grid grid-cols-2 my-4">
       <div className="border-gray-300 border-r-4 border-solid p-4 row-span-2 leading-snug font-bold">
@@ -36,13 +38,19 @@ const Address = props => {
         ))}
       </div>
       <a
-        className="p-4 border-gray-300 border-b-4 border-solid"
+        className={
+          linkClassNames +
+          " border-gray-300 border-b-4 border-solid rounded-br-none"
+        }
         href={datumToUse.googleUrl}
       >
-        <p>View on Google Maps →</p>
+        <p className="underline">View on Google Maps →</p>
       </a>
-      <a className="block p-4" href={datumToUse.appleUrl}>
-        <p>View on Apple Maps →</p>
+      <a
+        className={linkClassNames + " rounded-tr-none"}
+        href={datumToUse.appleUrl}
+      >
+        <p className="underline">View on Apple Maps →</p>
       </a>
     </div>
   );

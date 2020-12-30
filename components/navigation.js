@@ -1,3 +1,4 @@
+import Search from "./search";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Icon from "./icon";
@@ -53,11 +54,24 @@ const navItems = [
     ],
   },
   { href: "/appointments", title: "Appointments" },
-  { href: "https://google.com", title: "Google" },
   { href: "/how-to-reach", title: "How to Reach your Pediatrician" },
   { href: "/emergencies-after-hours", title: "Emergencies & After Hours" },
   { href: "/new-patient", title: "New Patient Information" },
-  { href: "/resources", title: "Forms & Resources" },
+  {
+    href: "/resources",
+    title: "Forms & Resources",
+    children: [
+      { href: "https://files.rothrotterlaster.com/fever.pdf", title: "Fever" },
+      {
+        href: "https://files.rothrotterlaster.com/vomit-diarrhea.pdf",
+        title: "Vomiting & Diarhhea",
+      },
+      {
+        href: "https://files.rothrotterlaster.com/drug-dosing.pdf",
+        title: "Medication Dosing",
+      },
+    ],
+  },
   { href: "/policies", title: "Office Policies" },
   { href: "/insurance", title: "Insurance & Payments" },
   { href: "/referrals", title: "Referrals" },
@@ -65,7 +79,7 @@ const navItems = [
 
 const listNavItems = (items) => {
   return items.map((item) => (
-    <NavItem href={item.href} title={item.title}>
+    <NavItem key={item.href} href={item.href} title={item.title}>
       {item.children ? listNavItems(item.children) : null}
     </NavItem>
   ));
@@ -75,6 +89,7 @@ const Navigation = () => {
   const navItemElements = listNavItems(navItems);
   return (
     <div className="flex-shrink-0">
+      <Search />
       <ul>{navItemElements}</ul>
     </div>
   );

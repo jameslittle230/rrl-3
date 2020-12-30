@@ -5,3 +5,7 @@
 body {
   /* @apply bg-blue-500 p-12; */
 }
+
+svg {
+  display: inline;
+}
