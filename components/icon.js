@@ -3,7 +3,7 @@ import PhoneFill from "./icons/phone.fill.svg";
 import ArrowUpRightSquare from "./icons/arrow.up.right.square.svg";
 import DocText from "./icons/doc.text.svg";
 
-export default (props) => {
+const Icon = props => {
   const icons = {
     "mappin.circle.fill": <MappinCircleFill />,
     "phone.fill": <PhoneFill />,
@@ -23,3 +23,5 @@ export default (props) => {
     </span>
   );
 };
+
+export default Icon;

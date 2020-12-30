@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useEffect } from "react";
 
-export default () => {
+const Search = () => {
   const name = "federalist";
 
   useEffect(
@@ -35,3 +35,5 @@ export default () => {
     </div>
   );
 };
+
+export default Search;
