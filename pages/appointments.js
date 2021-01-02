@@ -24,16 +24,6 @@ Our office address is:
 const Appointments = () => <Container>
   <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
   <Address></Address>
-  {/* <iframe
-    className="my-4 ring ring-gray-400"
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.1759327244226!2d-71.13215350000002!3d42.33877230000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e379ba880fdf45%3A0x536471f86b11d0cf!2s637+Washington+St+%23202%2C+Brookline%2C+MA+02446!5e0!3m2!1sen!2sus!4v1439920811315"
-    width="100%"
-    height="450"
-    frameborder="0"
-    allowfullscreen=""
-    title="Map of Roth, Rotter, and Laster Office"
-    style={{"border": "0px"}}
-  ></iframe> */}
   <div className="prose">
     <p>
       <strong>Note: </strong>We require 24 hours notice to cancel an

@@ -12,8 +12,9 @@ const NavItem = (props) => {
   // Drives whether "folder" is open
   const isCurrentPageOrChild = router.pathname.startsWith(props.href);
 
-  const baseClassNames = "uppercase text-md mb-2 px-3 py-1";
-  const currentPageClassNames = "bg-blue-100 font-bold rounded";
+  const baseClassNames =
+    "uppercase text-md mb-2 px-3 py-1 rounded hover:bg-gray-100";
+  const currentPageClassNames = "bg-blue-100 hover:bg-blue-200 font-bold";
 
   const classNames = [
     baseClassNames,
@@ -24,10 +25,14 @@ const NavItem = (props) => {
     <li>
       <p className={classNames}>
         {props.href.startsWith("/") ? (
-          <Link href={props.href}>{props.title}</Link>
+          <Link href={props.href}>
+            <div className="cursor-pointer">{props.title}</div>
+          </Link>
         ) : (
           <a href={props.href}>
-            {props.title} <Icon icon="arrow.up.right.square" />
+            <div className="cursor-pointer">
+              {props.title} <Icon icon="arrow.up.right.square" />
+            </div>
           </a>
         )}
       </p>

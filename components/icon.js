@@ -9,6 +9,8 @@ const Icon = props => {
     "phone.fill": <PhoneFill />,
     "arrow.up.right.square": <ArrowUpRightSquare />,
     "doc.text": <DocText />,
+    "logo.google": <DocText />,
+    "logo.apple": <DocText />,
   };
 
   if (!icons[props.icon]) {
@@ -17,7 +19,7 @@ const Icon = props => {
 
   return (
     <span
-      className={`inline relative bottom-0.5 font-black ${props.className}`}
+      className={`inline relative bottom-0.5 ${props.className}`}
     >
       {icons[props.icon]}
     </span>

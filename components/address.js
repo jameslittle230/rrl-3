@@ -1,3 +1,5 @@
+import Icon from "./icon";
+
 const Address = (props) => {
   const data = {
     default: {
@@ -44,13 +46,17 @@ const Address = (props) => {
         }
         href={datumToUse.googleUrl}
       >
-        <p className="underline">View on Google Maps →</p>
+        <p>
+          <Icon icon="logo.google" /> View on Google Maps →
+        </p>
       </a>
       <a
         className={linkClassNames + " rounded-tr-none"}
         href={datumToUse.appleUrl}
       >
-        <p className="underline">View on Apple Maps →</p>
+        <p>
+          <Icon icon="logo.apple" /> View on Apple Maps →
+        </p>
       </a>
     </div>
   );
