@@ -7,7 +7,7 @@ const Search = () => {
   useEffect(
     () => {
       if (stork) {
-        stork.register(name, "https://files.stork-search.net/federalist.st", {
+        stork.register(name, "/search-index.st", {
           showProgress: false,
         });
       }
