@@ -1,5 +1,4 @@
 import Container from "../components/container";
-import Image from "next/image";
 
 const Profile = (props) => (
   <div className="border-gray-300 border-2 border-solid rounded-xl p-4 my-4">
