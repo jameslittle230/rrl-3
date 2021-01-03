@@ -1,17 +1,40 @@
 import Link from "next/link";
 
 const Button = (props) => {
-  const baseColorValue = props.colorValue || 500;
+  if(!props.type) {
+    throw new Error(`props.type not defined for a button! Found ${JSON.stringify(props)}`)
+  }
+  const data = {
+    red: {
+      borderColor: "border-red-600",
+      bgGradientFrom: "from-red-200",
+      bgGradientTo: "to-red-300",
+      hoverGradientFrom: "hover:from-red-100",
+      textColor: "text-red-900",
+    },
+   
+    blue: {
+      borderColor: "border-blue-500",
+      bgGradientFrom: "from-blue-100",
+      bgGradientTo: "to-blue-200",
+      hoverGradientFrom: "hover:from-blue-50",
+      textColor: "text-blue-900",
+    },
+  }
+
+  const {
+    borderColor, bgGradientFrom, bgGradientTo, hoverGradientFrom, textColor
+  } = data[props.type];
 
   const className = `rounded-lg px-5 py-3 
       border-solid border-2 
-      border-${props.color}-${baseColorValue}
+      ${borderColor}
       inline-block 
       bg-gradient-to-b 
-      from-${props.color}-${baseColorValue - 400} 
-      to-${props.color}-${baseColorValue - 300}
-      hover:from-${props.color}-50
-      font-bold text-${props.color}-900
+      ${bgGradientFrom}
+      ${bgGradientTo}
+      ${hoverGradientFrom}
+      font-bold ${textColor}
       cursor-pointer`;
 
   const externalLink = props.href.startsWith("http");

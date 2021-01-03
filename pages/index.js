@@ -41,7 +41,7 @@ const Index = () => (
         <Alert
           title="COVID-19 Information"
           endContent={
-            <Button href="/covid19" color="red" colorValue={600}>
+            <Button href="/covid19" type="red">
               Visit the COVID-19 Page →
             </Button>
           }
@@ -58,8 +58,8 @@ const Index = () => (
     <>
       <img
         className="w-full ring ring-gray-700 rounded-lg"
-        src="https://rothrotterlaster.com/static/359dd930e6d4c10c8bca4c8e7b53d182/4fe8c/building-c.jpg"
-        alt=""
+        src="/images/building-c.jpg"
+        alt="An image of the facade of 637 Washington Street"
       />
       <Spacer />
       <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>

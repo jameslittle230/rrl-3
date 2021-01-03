@@ -2,15 +2,19 @@ import MappinCircleFill from "./icons/mappin.circle.fill.svg";
 import PhoneFill from "./icons/phone.fill.svg";
 import ArrowUpRightSquare from "./icons/arrow.up.right.square.svg";
 import DocText from "./icons/doc.text.svg";
+import LogoGoogle from "./icons/logo.google.svg";
+import LogoApple from "./icons/logo.apple.svg";
+import Video from "./icons/video.svg";
 
-const Icon = props => {
+const Icon = (props) => {
   const icons = {
     "mappin.circle.fill": <MappinCircleFill />,
     "phone.fill": <PhoneFill />,
     "arrow.up.right.square": <ArrowUpRightSquare />,
     "doc.text": <DocText />,
-    "logo.google": <DocText />,
-    "logo.apple": <DocText />,
+    "logo.google": <LogoGoogle />,
+    "logo.apple": <LogoApple />,
+    video: <Video />,
   };
 
   if (!icons[props.icon]) {
@@ -18,9 +22,7 @@ const Icon = props => {
   }
 
   return (
-    <span
-      className={`inline relative bottom-0.5 ${props.className}`}
-    >
+    <span className={`inline relative bottom-0.5 ${props.className}`}>
       {icons[props.icon]}
     </span>
   );

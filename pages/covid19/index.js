@@ -45,6 +45,8 @@ continue to monitor carefully for symptoms through Day 14
 test on Day 5 after the exposure; continue to monitor carefully for symptoms
 through Day 14
 
+[Click here to view a chart describing how to quarantine. →](https://files.rothrotterlaster.com/quarantine.pdf)
+
 ## TESTING: How do I get my child tested?
 
 If your child is sick, call the office and we will arrange a drive through
@@ -75,8 +77,9 @@ for more details.
 
 ### What does quarantine mean?
 
-The person stays separate and masked even at home for 14 days. View/download
-a quarantine guide from the Mass. Department of Public Health →
+The person stays separate and masked even at home for 14 days.
+
+[Click here to view a chart describing how to quarantine. →](https://files.rothrotterlaster.com/quarantine.pdf)
 
 ### What does isolation mean?
 
@@ -84,11 +87,13 @@ The sick person stays completely away in a separate room from anyone who is
 not sick. All family members are masked.
 `;
 
-const Index = () => <Container>
-  <p className="text-sm uppercase text-gray-600 mb-6">
-    Last updated on 2020-12-21
-  </p>
-  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-</Container>;
+const Index = () => (
+  <Container>
+    <p className="text-sm uppercase text-gray-600 mb-6">
+      Last updated on 2020-12-21
+    </p>
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+  </Container>
+);
 
 export default Index;

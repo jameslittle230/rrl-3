@@ -1,6 +1,6 @@
 import Container from "../components/container";
+import Resource from "../components/resource";
 import ReactMarkdown from "react-markdown";
-import Alert from "../components/alert";
 
 const markdownContent = `
 # New Patient Information
@@ -10,14 +10,25 @@ We are always happy to hear from new families. If you are an expecting a baby, n
 In advance of making an appointment, please forward your child's health and immunization records. After reviewing them, we will call you to schedule an appointment.
 
 On the day of your appointment, please fill out and bring three forms:
-
-1. New Patient Information Form
-2. Family History Form
-3. General Consent Form
 `;
 
-const NewPatient = () => <Container>
-  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-</Container>;
+const NewPatient = () => (
+  <Container>
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+
+    <Resource
+      url="https://files.rothrotterlaster.com/new-patient.pdf"
+      name="New Patient Information"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/family-history.pdf"
+      name="Family History Form"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/general-consent.pdf"
+      name="General Consent Form"
+    />
+  </Container>
+);
 
 export default NewPatient;

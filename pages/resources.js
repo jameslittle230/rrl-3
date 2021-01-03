@@ -1,22 +1,6 @@
 import Container from "../components/container";
-import Icon from "../components/icon"
+import Resource from "../components/resource";
 import ReactMarkdown from "react-markdown";
-
-const Resource = (props) => (
-  <a
-    href={props.url}
-    className={`block p-4 rounded-xl
-  border-4 border-gray-500 border-solid
-  flex space-x-4`}
-  >
-    <div className="flex-shrink text-4xl"><Icon icon="doc.text" /></div>
-    <div className="">
-      <p className="text-lg font-semibold">{props.name} →</p>
-      <p className="text-sm text-gray-600">{props.subtitle}</p>
-      {props.children ? <p className="mt-4">{props.children}</p> : null}
-    </div>
-  </a>
-);
 
 const markdownContent = `
 # Forms & Resources
@@ -33,6 +17,7 @@ and is not specific to any one child or any one medical situation.
 `;
 
 const wellVisitContent = `
+&nbsp;
 ## Well Visit Forms
 At the completion of your child’s routine annual check up, you will receive a
 general health form which will include up-to-date immunization information.
@@ -50,33 +35,66 @@ There is a charge to provide you with extra copies of your child’s health
 form.
 `;
 
-const Resources = () => <Container>
-  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  <div className="grid grid-cols-1 gap-2">
+const Resources = () => (
+  <Container>
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
     <Resource
-      url="https://files.rothrotterlaster.com/whatever.pdf"
+      url="https://files.rothrotterlaster.com/fever.pdf"
       name="Fever"
-      subtitle="25 MB"
     />
     <Resource
-      url="https://files.rothrotterlaster.com/whatever.pdf"
+      url="https://files.rothrotterlaster.com/vomit-diarrhea.pdf"
       name="Vomiting and Diarrhea"
-      subtitle="25 MB"
     />
     <Resource
-      url="https://files.rothrotterlaster.com/whatever.pdf"
+      url="https://files.rothrotterlaster.com/stomach-bugs.pdf"
       name="How to Prevent Stomach Bugs"
-      subtitle="25 MB"
     />
     <Resource
-      url="https://files.rothrotterlaster.com/whatever.pdf"
+      url="https://files.rothrotterlaster.com/drug-dosing.pdf"
       name="Dosing for over-the-counter medications"
-      subtitle="25 MB • Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
+      subtitle="Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl
       (Diphenhydramine)"
-    >
-    </Resource>
-  </div>
-  <ReactMarkdown className="prose">{wellVisitContent}</ReactMarkdown>
-</Container>;
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/add-checklist.pdf"
+      name="ADHD Diagnostic Checklist"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/toilet-training.pdf"
+      name="Toilet Training"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/starting-solids.pdf"
+      name="Starting Solids"
+    />
+    <Resource
+      url="https://www.youtube.com/watch?v=Hl6vItGt4qQ"
+      name="How to do your Strep Test at home (video)"
+      icon="video"
+    />
+    <ReactMarkdown className="prose">{wellVisitContent}</ReactMarkdown>
+    <Resource
+      url="https://files.rothrotterlaster.com/new-patient.pdf"
+      name="New Patient Information"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/family-history.pdf"
+      name="Family History Form"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/general-consent.pdf"
+      name="General Consent Form"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/privacy-summary.pdf"
+      name="Notice of Privacy Practices"
+    />
+    <Resource
+      url="https://files.rothrotterlaster.com/teen-consent.pdf"
+      name="Adolescent Consent to Share Medical Information with Guardian or Parent"
+    />
+  </Container>
+);
 
 export default Resources;

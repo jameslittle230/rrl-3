@@ -18,7 +18,7 @@ const Header = () => (
       </div>
     </div>
     <div>
-      <Button color="blue" href="https://mychart.chppoc.org/rrl">
+      <Button type="blue" href="https://mychart.chppoc.org/rrl">
         Patient Portal Login →
       </Button>
     </div>
