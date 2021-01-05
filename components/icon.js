@@ -5,6 +5,8 @@ import DocText from "./icons/doc.text.svg";
 import LogoGoogle from "./icons/logo.google.svg";
 import LogoApple from "./icons/logo.apple.svg";
 import Video from "./icons/video.svg";
+import EllipsisRectangle from "./icons/ellipsis.rectangle.svg"
+import XmarkCircleFill from "./icons/xmark.circle.fill.svg"
 
 const Icon = (props) => {
   const icons = {
@@ -15,6 +17,8 @@ const Icon = (props) => {
     "logo.google": <LogoGoogle />,
     "logo.apple": <LogoApple />,
     video: <Video />,
+    "ellipsis.rectangle": <EllipsisRectangle />,
+    "xmark.circle.fill": <XmarkCircleFill />
   };
 
   if (!icons[props.icon]) {

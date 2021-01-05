@@ -13,7 +13,7 @@ const NavItem = (props) => {
   const isCurrentPage = props.href === router.pathname;
 
   const baseClassNames = "text-lg mb-2 px-3 py-2 rounded cursor-pointer";
-  const currentPageClassNames = "bg-blue-900 font-bold";
+  const currentPageClassNames = "bg-blue-700 text-gray-50 font-bold";
 
   const classNames = [
     baseClassNames,
@@ -34,7 +34,7 @@ const NavItem = (props) => {
         </a>
       )}
       {props.children ? (
-        <ul className="ml-4 pl-2 border-l-4 border-gray-200">
+        <ul className="ml-4 pl-2 border-l-4 border-gray-500">
           {props.children}
         </ul>
       ) : null}
@@ -52,21 +52,21 @@ const listNavItems = (items) => {
 
 const MobileNavigation = (props) => {
   return (
-    <div className="fixed w-screen h-screen bg-gray-800 text-white z-50 p-12 overflow-y-scroll">
-      <div className="flex justify-between">
-        <h1 className="font-black text-3xl">Navigation</h1>
+    <div className="fixed w-screen h-screen bg-gray-300 z-50 p-8 overflow-y-scroll">
+      <div className="flex justify-between items-start">
+        <h1 className="font-black text-3xl pb-6">Navigation</h1>
         <button
+          className="text-3xl p-0"
           onClick={() => {
             props.setMobileNavVisible(false);
           }}
         >
-          &times;
+          <Icon icon="xmark.circle.fill" />
         </button>
       </div>
-      <Spacer />
 
       <Search />
-      <ul>{listNavItems(NavItems)}</ul>
+      <ul className="mb-8">{listNavItems(NavItems)}</ul>
     </div>
   );
 };

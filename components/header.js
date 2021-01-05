@@ -4,17 +4,17 @@ import Button from "./button";
 const Header = (props) => (
   <div className="flex justify-between space-x-0 md:space-x-8">
     <div className="w-full">
-      <div className="flex  justify-between">
+      <div className="flex justify-between items-start">
         <h1 className="text-blue-600 font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2">
           Drs. Roth, Rotter, &amp;&nbsp;Laster
         </h1>
         <button
-          className="bg-gray-300 md:hidden"
+          className="md:hidden text-5xl text-gray-700"
           onClick={() => {
             props.setMobileNavVisible(true);
           }}
         >
-          Navigation
+          <Icon icon="ellipsis.rectangle" />
         </button>
       </div>
 
