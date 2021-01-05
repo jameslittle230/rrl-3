@@ -24,7 +24,7 @@ our intimate office setting we can easily maintain close, long term
 health relationships with our families.`;
 
 const HomeBox = (props) => (
-  <div className="rounded ring ring-blue-300 flex-shrink w-1/2">
+  <div className="rounded ring ring-blue-300 flex-shrink mb-4 sm:mb-0 sm:w-1/2">
     <div className="bg-blue-200 p-3 font-bold text-lg rounded-tl rounded-tr">
       {props.title}
     </div>
@@ -64,7 +64,7 @@ const Index = () => (
       <Spacer />
       <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
       <Spacer />
-      <div className="flex space-x-4">
+      <div className="block sm:flex sm:space-x-4">
         <HomeBox title="Flu Clinic 2020">
           We are happy to let you know that we will begin a series of multiple
           flu vaccine clinics starting in September. We will notify you about
