@@ -2,7 +2,7 @@ import Container from "../components/container";
 
 const Profile = (props) => (
   <div className="border-gray-300 border-2 border-solid rounded-xl p-4 my-4">
-    <div className="flex space-x-4">
+    <div className="flex-column space-y-2 lg:flex lg:flex-row md:space-x-4">
       <div className="w-52 flex-shrink-0">
         <img
           className="rounded"
@@ -33,9 +33,9 @@ const StaffProfile = (props) => (
 );
 
 const About = () => (
-  <Container>
+  <Container title="About the Office">
     <div className="prose">
-      <h1>About the office</h1>
+      <h1>About the Office</h1>
       <p>Welcome to the office of Drs. Roth, Rotter, and Laster.</p>
     </div>
     <Profile name="Sally S. Roth, MD" imageUrl="/images/roth.jpg">
@@ -68,7 +68,7 @@ const About = () => (
       <h2>Our Office Staff</h2>
     </div>
 
-    <div className="grid grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <StaffProfile
         name="Linda Diaz"
         since="1991"

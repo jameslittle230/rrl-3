@@ -25,8 +25,10 @@ plan with our office manager. While we cannot waive fees, we can always set
 up a monthly payment plan, should the need arise.
 `;
 
-const Insurance = () => <Container>
-  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-</Container>;
+const Insurance = () => (
+  <Container title="Insurance">
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+  </Container>
+);
 
 export default Insurance;

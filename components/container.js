@@ -12,7 +12,9 @@ const Container = (props) => {
   return (
     <>
       <Head>
+        <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>{props.title ? `${props.title} - ` : ""}Drs. Roth, Rotter, and Laster</title>
       </Head>
 
       {mobileNavVisible ? (

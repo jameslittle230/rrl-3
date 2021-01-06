@@ -88,7 +88,7 @@ not sick. All family members are masked.
 `;
 
 const Index = () => (
-  <Container>
+  <Container title="COVID-19 Guidelines">
     <p className="text-sm uppercase text-gray-600 mb-6">
       Last updated on 2020-12-21
     </p>

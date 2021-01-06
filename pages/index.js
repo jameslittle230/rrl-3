@@ -36,6 +36,7 @@ const HomeBox = (props) => (
 
 const Index = () => (
   <Container
+    title="Home"
     belowHeader={
       <>
         <Alert

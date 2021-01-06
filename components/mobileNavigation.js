@@ -12,7 +12,8 @@ const NavItem = (props) => {
   // Drives highlight
   const isCurrentPage = props.href === router.pathname;
 
-  const baseClassNames = "text-lg mb-2 px-3 py-2 rounded cursor-pointer";
+  const baseClassNames =
+    "text-lg mb-2 px-3 py-2 rounded cursor-pointer active:bg-gray-400";
   const currentPageClassNames = "bg-blue-700 text-gray-50 font-bold";
 
   const classNames = [
@@ -52,11 +53,12 @@ const listNavItems = (items) => {
 
 const MobileNavigation = (props) => {
   return (
-    <div className="fixed w-screen h-screen bg-gray-300 z-50 p-8 overflow-y-scroll">
+    <div className="fixed w-screen h-screen bg-gray-300 z-50 p-8 overflow-y-scroll overscroll-contain">
       <div className="flex justify-between items-start">
         <h1 className="font-black text-3xl pb-6">Navigation</h1>
         <button
-          className="text-3xl p-0"
+          className="text-3xl active:bg-gray-400 rounded-full"
+          style={{ height: "1.4em", width: "1.4em", textAlign: "center", lineHeight: "1.4em" }}
           onClick={() => {
             props.setMobileNavVisible(false);
           }}
@@ -66,7 +68,7 @@ const MobileNavigation = (props) => {
       </div>
 
       <Search />
-      <ul className="mb-8">{listNavItems(NavItems)}</ul>
+      <ul className="pb-80">{listNavItems(NavItems)}</ul>
     </div>
   );
 };

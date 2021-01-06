@@ -36,12 +36,9 @@ form.
 `;
 
 const Resources = () => (
-  <Container>
+  <Container title="Forms and Resources">
     <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-    <Resource
-      url="https://files.rothrotterlaster.com/fever.pdf"
-      name="Fever"
-    />
+    <Resource url="https://files.rothrotterlaster.com/fever.pdf" name="Fever" />
     <Resource
       url="https://files.rothrotterlaster.com/vomit-diarrhea.pdf"
       name="Vomiting and Diarrhea"

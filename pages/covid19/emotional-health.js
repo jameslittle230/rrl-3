@@ -11,14 +11,16 @@ the link to find hands on strategies for many stressful situations that
 parents and patients confront. And as always, we are here to help.
 `;
 
-const EmotionalHealth = () => <Container>
-  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+const EmotionalHealth = () => (
+  <Container title="Emotional Health during COVID-19">
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
 
-  <Resource
+    <Resource
       url="https://files.rothrotterlaster.com/covid-toolkit-ppoc.pdf"
       name="Coping Skills for Families during COVID-19 and Beyond (Boston Children's Hospital)"
       subtitle="25 MB"
     />
-</Container>;
+  </Container>
+);
 
 export default EmotionalHealth;

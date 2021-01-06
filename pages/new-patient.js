@@ -13,7 +13,7 @@ On the day of your appointment, please fill out and bring three forms:
 `;
 
 const NewPatient = () => (
-  <Container>
+  <Container title="New Patient Information">
     <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
 
     <Resource

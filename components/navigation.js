@@ -14,7 +14,7 @@ const NavItem = (props) => {
   const isCurrentPageOrChild = router.pathname.startsWith(props.href);
 
   const baseClassNames =
-    "uppercase text-md mb-2 px-3 py-1 rounded hover:bg-gray-100 cursor-pointer";
+    "uppercase text-md mb-2 px-3 py-1 rounded hover:bg-gray-100 active:bg-gray-300 cursor-pointer";
   const currentPageClassNames = "bg-blue-100 hover:bg-blue-200 font-bold";
 
   const classNames = [

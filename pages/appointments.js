@@ -1,5 +1,5 @@
 import Container from "../components/container";
-import Address from "../components/address"
+import Address from "../components/address";
 import ReactMarkdown from "react-markdown";
 
 const markdownContent = `
@@ -21,16 +21,18 @@ office at 617-232-2811.
 Our office address is:
 `;
 
-const Appointments = () => <Container>
-  <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  <Address></Address>
-  <div className="prose">
-    <p>
-      <strong>Note: </strong>We require 24 hours notice to cancel an
-      appointment. There is a charge for appointments missed without proper
-      notice.
-    </p>
-  </div>
-</Container>;
+const Appointments = () => (
+  <Container title="Appointments">
+    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+    <Address></Address>
+    <div className="prose">
+      <p>
+        <strong>Note: </strong>We require 24 hours notice to cancel an
+        appointment. There is a charge for appointments missed without proper
+        notice.
+      </p>
+    </div>
+  </Container>
+);
 
 export default Appointments;

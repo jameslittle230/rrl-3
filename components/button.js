@@ -1,8 +1,10 @@
 import Link from "next/link";
 
 const Button = (props) => {
-  if(!props.type) {
-    throw new Error(`props.type not defined for a button! Found ${JSON.stringify(props)}`)
+  if (!props.type) {
+    throw new Error(
+      `props.type not defined for a button! Found ${JSON.stringify(props)}`
+    );
   }
   const data = {
     red: {
@@ -10,20 +12,27 @@ const Button = (props) => {
       bgGradientFrom: "from-red-200",
       bgGradientTo: "to-red-300",
       hoverGradientFrom: "hover:from-red-100",
+      activeGradientFrom: "active:from-red-400",
       textColor: "text-red-900",
     },
-   
+
     blue: {
       borderColor: "border-blue-500",
       bgGradientFrom: "from-blue-100",
       bgGradientTo: "to-blue-200",
       hoverGradientFrom: "hover:from-blue-50",
+      activeGradientFrom: "active:from-blue-300",
       textColor: "text-blue-900",
     },
-  }
+  };
 
   const {
-    borderColor, bgGradientFrom, bgGradientTo, hoverGradientFrom, textColor
+    borderColor,
+    bgGradientFrom,
+    bgGradientTo,
+    hoverGradientFrom,
+    textColor,
+    activeGradientFrom,
   } = data[props.type];
 
   const className = `rounded-lg px-5 py-3 
@@ -34,6 +43,7 @@ const Button = (props) => {
       ${bgGradientFrom}
       ${bgGradientTo}
       ${hoverGradientFrom}
+      ${activeGradientFrom}
       font-bold ${textColor}
       cursor-pointer`;
 
