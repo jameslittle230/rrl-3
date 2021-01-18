@@ -11,6 +11,10 @@ payment waiver in case the insurance coverage is incorrect. We recommend
 taking a picture of your child’s insurance card on your phone so you have a
 copy with you at all times.
 
+There may be a charge associated with telemedicine which includes video visits,
+phone calls or portal messages. This is in accordance with the Massachusetts 
+Governor's Executive Order from March, 2020.
+
 We accept most major insurance plans. If you have any questions, please call
 our office to find out if we accept your insurance.
 
