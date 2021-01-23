@@ -21,7 +21,7 @@ const Container = (props) => {
         <MobileNavigation setMobileNavVisible={setMobileNavVisible} />
       ) : null}
 
-      <div className="border-t-8 border-blue-500 border-solid"></div>
+      <div className="border-t-8 border-blue-400 border-solid"></div>
       <div className="container max-w-screen-lg mx-auto p-4">
         <Header setMobileNavVisible={setMobileNavVisible} />
         <Spacer border size="large" />

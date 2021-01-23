@@ -1002,6 +1002,11 @@
   resolved "https://registry.yarnpkg.com/@next/react-refresh-utils/-/react-refresh-utils-10.0.3.tgz#276bec60eae18768f96baf8a52f668f657f50ab4"
   integrity sha512-XtzzPX2R4+MIyu1waEQUo2tiNwWVEkmObA6pboRCDTPOs4Ri8ckaIE08lN5A5opyF6GVN+IEq/J8KQrgsePsZQ==
 
+"@socialgouv/matomo-next@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/matomo-next/-/matomo-next-1.1.2.tgz#90c15215b6d006f7c50ea3c914802508fd507a3f"
+  integrity sha512-lyTzZ5Za+9IhwGTO5TkHG5IxQLaRx5jEZHJl3NvDqQ2Co899+Av/JEdoyeZgQ1daJRURbEcFnhqCHwM7a+EuRg==
+
 "@svgr/babel-plugin-add-jsx-attribute@^5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-add-jsx-attribute/-/babel-plugin-add-jsx-attribute-5.4.0.tgz#81ef61947bb268eb9d50523446f9c638fb355906"

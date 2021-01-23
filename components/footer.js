@@ -16,8 +16,8 @@ const Footer = () => {
         <div>
           <img
             className="inline mb-8 sm:w-64 flex-grow-0 ring ring-gray-200"
-            src="https://rothrotterlaster.com/static/fc1d97dbc0967de6a3399f42f5af3223/a6173/ppoc.jpg"
-            alt=""
+            src="/images/ppoc.jpg"
+            alt="Drs. Roth, Rotter and Laster are preferred Boston Children's Hospital Community of Care members."
           />
         </div>
       </div>
