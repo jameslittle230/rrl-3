@@ -53,10 +53,11 @@ If your child is sick, call the office and we will arrange a drive through
 test at Boston Children’s Hospital. If your child is not sick or has been
 exposed, you can find a testing site at the following websites:
 
-- <https://memamaps.maps.arcgis.com> — Enter your zip code and filter for 
-  "Referral not required". Then click the search spyglass and check each site 
-  listed. The instructions for each site will be there. If you are sick, 
-  insurance should pay. If you are not sick, there is usually a charge. 
+- <https://www.mass.gov/info-details/find-a-covid-19-test> — Enter your zip
+  code and filter for "Referral not required". Then click the search spyglass
+  and check each site listed. The instructions for each site will be there. If
+  you are sick, insurance should pay. If you are not sick, there is usually a
+  charge.
 - Another website that shows testing sites that are free for all patients is 
   Stop the Spread. 
 - In addition, Brookline residents, students and teachers can get tested at the
@@ -90,7 +91,7 @@ not sick. All family members are masked.
 const Index = () => (
   <Container title="COVID-19 Guidelines">
     <p className="text-sm uppercase text-gray-600 mb-6">
-      Last updated on 2020-12-21
+      Last updated on 2021-02-16
     </p>
     <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
   </Container>
