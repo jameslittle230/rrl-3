@@ -23,7 +23,7 @@ const statusBank = {
   },
 
   sendingInProgress: {
-    message: "...",
+    message: "Sending feedback, please wait...",
     color: "gray",
   },
 
