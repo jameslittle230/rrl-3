@@ -16,10 +16,10 @@ const Container = (props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>{props.title ? `${props.title} - ` : ""}Drs. Roth, Rotter, and Laster</title>
         {/* http://jil.im/favicon2021 */}
-        <link rel="icon" href="/favicon.ico">
-        <link rel="icon" href="/icon.svg" type="image/svg+xml">
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-        <link rel="manifest" href="/manifest.webmanifest">
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.webmanifest" />
 
       </Head>
 
