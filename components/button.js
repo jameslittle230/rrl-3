@@ -16,6 +16,15 @@ const Button = (props) => {
       textColor: "text-red-900",
     },
 
+    yellow: {
+      borderColor: "border-yellow-600",
+      bgGradientFrom: "from-yellow-200",
+      bgGradientTo: "to-yellow-300",
+      hoverGradientFrom: "hover:from-yellow-100",
+      activeGradientFrom: "active:from-yellow-400",
+      textColor: "text-yellow-900",
+    },
+
     blue: {
       borderColor: "border-blue-500",
       bgGradientFrom: "from-blue-100",
@@ -59,7 +68,7 @@ const Button = (props) => {
     );
   } else if (internalLink) {
     return (
-      <Link href={props.href}>
+      <Link href={props.href} passHref>
         <p className={className}>{props.children}</p>
       </Link>
     );

@@ -41,16 +41,19 @@ const Index = () => (
       <>
         <Alert
           title="COVID-19 Information"
+          color="yellow"
           endContent={
-            <Button href="/covid19" type="red">
-              Visit the COVID-19 Page →
+            <Button href="/covid19/vaccination" type="yellow">
+              Visit the COVID-19 Vaccination Page →
             </Button>
           }
         >
-          COVID-19 continues to be a significant danger to those in the
-          Brookline Community. Our COVID-19 Guidelines page has up-to-date
-          medical advice from the Massachusetts Department of Health and the
-          Center for Disease Control.
+          The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 12
+          years and older.{" "}
+          <strong>
+            We strongly urge all of our patients 12 years and older to get the
+            COVID-19 vaccine.
+          </strong>
         </Alert>
         <Spacer />
       </>

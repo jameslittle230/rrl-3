@@ -3,8 +3,6 @@ import Link from "next/link";
 import NavItems from "../data/navigationItems";
 import Search from "./search";
 import Icon from "./icon";
-import Spacer from "./spacer";
-import { useEffect } from "react";
 
 const NavItem = (props) => {
   const router = useRouter();
@@ -12,8 +10,11 @@ const NavItem = (props) => {
   // Drives highlight
   const isCurrentPage = props.href === router.pathname;
 
+  // Drives icon
+  const isExternalLink = props.href.startsWith("/");
+
   const baseClassNames =
-    "text-lg mb-2 px-3 py-2 rounded cursor-pointer active:bg-gray-400";
+    "block text-lg mb-2 px-3 py-2 rounded cursor-pointer active:bg-gray-400";
   const currentPageClassNames = "bg-blue-700 text-gray-50 font-bold";
 
   const classNames = [
@@ -23,17 +24,12 @@ const NavItem = (props) => {
 
   return (
     <li>
-      {props.href.startsWith("/") ? (
-        <Link href={props.href}>
-          <div className={classNames}>{props.title}</div>
-        </Link>
-      ) : (
-        <a href={props.href}>
-          <div className={classNames}>
-            {props.title} <Icon icon="arrow.up.right.square" />
-          </div>
+      <Link href={props.href} passHref={true}>
+        <a className={classNames}>
+          {props.title}{" "}
+          {!isExternalLink ? <Icon icon="arrow.up.right.square" /> : null}
         </a>
-      )}
+      </Link>
       {props.children ? (
         <ul className="ml-4 pl-2 border-l-4 border-gray-500">
           {props.children}
