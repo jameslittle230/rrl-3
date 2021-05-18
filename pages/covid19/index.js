@@ -1,5 +1,8 @@
 import Container from "../../components/container";
+import Alert from "../../components/alert";
 import ReactMarkdown from "react-markdown";
+import Spacer from "../../components/spacer";
+import Link from "next/link";
 
 const markdownContent = `
 # COVID-19 Guidelines
@@ -90,8 +93,22 @@ not sick. All family members are masked.
 
 const Index = () => (
   <Container title="COVID-19 Guidelines">
+    <Alert color="yellow">
+      The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 12 years
+      and older.{" "}
+      <strong>
+        We strongly urge all of our patients 12 years and older to get the
+        COVID-19 vaccine.
+      </strong>{" "}
+      <Link href="/covid19/vaccination" passHref>
+        <a className="font-bold underline hover:opacity-60 cursor-pointer">
+          Read more →
+        </a>
+      </Link>
+    </Alert>
+    <Spacer></Spacer>
     <p className="text-sm uppercase text-gray-600 mb-6">
-      Last updated on 2021-02-16
+      Last reviewed on 2021-05-16
     </p>
     <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
   </Container>

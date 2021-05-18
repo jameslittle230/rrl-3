@@ -14,6 +14,10 @@ const navItems = [
         href: "/covid19/emotional-health",
         title: "Emotional Wellbeing",
       },
+      {
+        href: "/covid19/vaccination",
+        title: "Vaccination Information",
+      },
     ],
   },
   { href: "/appointments", title: "Appointments" },

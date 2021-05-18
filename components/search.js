@@ -10,6 +10,7 @@ const Search = () => {
       if (stork) {
         stork.register(name, "/search-index.st", {
           showProgress: false,
+          forceOverwrite: true,
           onQueryUpdate: (query, results) => {
             console.log(query, results.length);
             window._paq.push(["trackSiteSearch", query, false, results.length]);
@@ -41,7 +42,7 @@ const Search = () => {
       <div className="stork-wrapper">
         <input
           data-stork={name}
-          className="stork-input"
+          className="stork-input focus:ring-2 focus:ring-blue-600"
           placeholder="Search the site"
         />
         <div data-stork={`${name}-output`} className="stork-output"></div>

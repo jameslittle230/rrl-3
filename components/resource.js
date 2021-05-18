@@ -6,7 +6,7 @@ const Resource = (props) => (
     target="_blank"
     className={`p-4 my-4 rounded-xl
     border-4 border-gray-400 border-solid
-    flex space-x-4 items-center`}
+    flex space-x-4 items-center hover:bg-gray-100`}
   >
     <div className="flex-shrink text-4xl">
       <Icon icon={props.icon || "doc.text"} />

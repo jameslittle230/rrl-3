@@ -1,12 +1,13 @@
 import Icon from "./icon";
 import Button from "./button";
+import Link from "next/link";
 
 const Header = (props) => (
   <div className="flex justify-between space-x-0 md:space-x-8">
     <div className="w-full">
       <div className="flex justify-between items-start">
         <h1 className="text-blue-600 font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2">
-          Drs. Roth, Rotter, &amp;&nbsp;Laster
+          <Link href="/" passHref>Drs. Roth, Rotter, &amp;&nbsp;Laster</Link>
         </h1>
         <button
           className="md:hidden text-5xl text-gray-700"

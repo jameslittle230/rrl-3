@@ -13,8 +13,11 @@ const NavItem = (props) => {
   // Drives whether "folder" is open
   const isCurrentPageOrChild = router.pathname.startsWith(props.href);
 
+  // Drives icon
+  const isExternalLink = props.href.startsWith("/");
+
   const baseClassNames =
-    "uppercase text-md mb-2 px-3 py-1 rounded hover:bg-gray-100 active:bg-gray-300 cursor-pointer";
+    "block uppercase text-md mb-2 px-3 py-1 rounded hover:bg-gray-100 active:bg-gray-300 focus:ring-2 focus:ring-blue-600";
   const currentPageClassNames = "bg-blue-100 hover:bg-blue-200 font-bold";
 
   const classNames = [
@@ -24,17 +27,12 @@ const NavItem = (props) => {
 
   return (
     <li>
-        {props.href.startsWith("/") ? (
-          <Link href={props.href}>
-            <div className={classNames}>{props.title}</div>
-          </Link>
-        ) : (
-          <a href={props.href}>
-            <div className={classNames}>
-              {props.title} <Icon icon="arrow.up.right.square" />
-            </div>
-          </a>
-        )}
+      <Link href={props.href} passHref={true}>
+        <a className={classNames}>
+          {props.title}{" "}
+          {!isExternalLink ? <Icon icon="arrow.up.right.square" /> : null}
+        </a>
+      </Link>
       {props.children && isCurrentPageOrChild ? (
         <ul className="ml-4 pl-2 border-l-4 border-gray-200">
           {props.children}

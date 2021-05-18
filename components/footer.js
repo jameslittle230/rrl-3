@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="w-full bg-gray-800 border-t-8 border-solid border-gray-600 mt-6">
       <div className="container max-w-screen-lg mx-auto p-8 text-gray-300 text-sm flex flex-col-reverse sm:flex-row justify-between">
         <div className="text">
-          <p>Website Design © {year} James Little</p>
+          <p>Website Design © {year} <a className="underline" href="https://jameslittle.me">James Little</a></p>
           <p>Content © {year} Sally Roth, Sari Rotter, Susan Laster</p>
           <p>Photos by Sari Rotter &amp; Bill Gardner</p>
           <div className="mt-2">
