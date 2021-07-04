@@ -7,6 +7,7 @@ import LogoApple from "./icons/logo.apple.svg";
 import Video from "./icons/video.svg";
 import EllipsisRectangle from "./icons/ellipsis.rectangle.svg"
 import XmarkCircleFill from "./icons/xmark.circle.fill.svg"
+import FaxMachine from "./icons/faxmachine.svg"
 
 const Icon = (props) => {
   const icons = {
@@ -18,7 +19,8 @@ const Icon = (props) => {
     "logo.apple": <LogoApple />,
     video: <Video />,
     "ellipsis.rectangle": <EllipsisRectangle />,
-    "xmark.circle.fill": <XmarkCircleFill />
+    "xmark.circle.fill": <XmarkCircleFill />,
+    "faxmachine": <FaxMachine />
   };
 
   if (!icons[props.icon]) {
