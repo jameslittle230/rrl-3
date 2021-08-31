@@ -66,6 +66,10 @@ const Resources = () => (
       name="Starting Solids"
     />
     <Resource
+      url="https://files.rothrotterlaster.com/parent-feeding-styles.pdf"
+      name="Parent Feeding Styles"
+    />
+    <Resource
       url="https://www.youtube.com/watch?v=Hl6vItGt4qQ"
       name="How to do your Strep Test at home (video)"
       icon="video"
