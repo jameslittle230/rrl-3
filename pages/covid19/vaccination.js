@@ -5,8 +5,8 @@ import ReactMarkdown from "react-markdown";
 const markdownContent = `
 # COVID-19 Vaccination Information for Patients
 
-The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 12 years and
-older. **We strongly urge all of our patients 12 years and older to get the
+The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5 years and
+older. **We strongly urge all of our patients 5 years and older to get the
 COVID-19 vaccine.**
 
 The Pfizer-BioNTech COVID-19 vaccine is a 2 dose vaccine given 21 days apart.

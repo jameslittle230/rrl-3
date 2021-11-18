@@ -83,7 +83,7 @@ for more details.
 
 The person stays separate and masked even at home for 14 days.
 
-[Click here to view a chart describing how to quarantine. →](https://files.rothrotterlaster.com/quarantine.pdf)
+[Click here to view a chart describing how to quarantine. →](https://files.rothrotterlaster.com/quarantine-2021-11-17.pdf)
 
 ### What does isolation mean?
 
@@ -94,10 +94,10 @@ not sick. All family members are masked.
 const Index = () => (
   <Container title="COVID-19 Guidelines">
     <Alert color="yellow">
-      The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 12 years
+      The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5 years
       and older.{" "}
       <strong>
-        We strongly urge all of our patients 12 years and older to get the
+        We strongly urge all of our patients 5 years and older to get the
         COVID-19 vaccine.
       </strong>{" "}
       <Link href="/covid19/vaccination" passHref>
