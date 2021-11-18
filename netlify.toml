@@ -1,3 +1,4 @@
 [build]
-  command = "./scripts/publish.sh"
-  publish = "out"
+command = "./scripts/publish.sh"
+publish = "out"
+environment = { NODE_VERSION = "16.13.0" }
