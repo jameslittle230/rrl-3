@@ -11,7 +11,7 @@ export async function getStaticProps() {
     generateStorkIndex();
   }
 
-  return {};
+  return { props: {} };
 }
 
 const markdownContent = `
