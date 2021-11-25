@@ -10,6 +10,8 @@ export async function getStaticProps() {
     generateStorkConfig();
     generateStorkIndex();
   }
+
+  return {};
 }
 
 const markdownContent = `
