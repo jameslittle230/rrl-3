@@ -1,11 +1,21 @@
 import Container from "../../components/container";
 import Alert from "../../components/alert";
-import ReactMarkdown from "react-markdown";
-import Spacer from "../../components/spacer";
 import Link from "next/link";
+import {MDXProvider} from '@mdx-js/react'
 
-const markdownContent = `
+
+
 # COVID-19 Guidelines
+
+<Alert color="yellow">
+  <MDXProvider components={{ p: ({ children }) => <p className="m-0">{children}</p> }}>
+The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5 years
+and older. **We strongly urge all of our patients 5 years and older to get the
+COVID-19 vaccine.**
+
+[Read more →](/covid19/vaccination)
+</MDXProvider>
+</Alert>
 
 Please help stop the spread of COVID-19 and wear your mask to cover your nose
 and mouth. This applies to everyone age 2 years and older. When socializing
@@ -56,7 +66,7 @@ If your child is sick, call the office and we will arrange a drive through
 test at Boston Children’s Hospital. If your child is not sick or has been
 exposed, you can find a testing site at the following websites:
 
-- <https://www.mass.gov/info-details/find-a-covid-19-test> — Enter your zip
+- [https://www.mass.gov/info-details/find-a-covid-19-test](https://www.mass.gov/info-details/find-a-covid-19-test) — Enter your zip
   code and filter for "Referral not required". Then click the search spyglass
   and check each site listed. The instructions for each site will be there. If
   you are sick, insurance should pay. If you are not sick, there is usually a
@@ -64,7 +74,7 @@ exposed, you can find a testing site at the following websites:
 - Another website that shows testing sites that are free for all patients is 
   Stop the Spread. 
 - In addition, Brookline residents, students and teachers can get tested at the
-  Brookline Department of Public Health: <https://www.mpathy.org/schedule>
+  Brookline Department of Public Health: [https://www.mpathy.org/schedule](https://www.mpathy.org/schedule)
 
 ## TRAVEL: What are the rules for travel?
 
@@ -89,29 +99,5 @@ The person stays separate and masked even at home for 14 days.
 
 The sick person stays completely away in a separate room from anyone who is
 not sick. All family members are masked.
-`;
 
-const Index = () => (
-  <Container title="COVID-19 Guidelines">
-    <Alert color="yellow">
-      The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5 years
-      and older.{" "}
-      <strong>
-        We strongly urge all of our patients 5 years and older to get the
-        COVID-19 vaccine.
-      </strong>{" "}
-      <Link href="/covid19/vaccination" passHref>
-        <a className="font-bold underline hover:opacity-60 cursor-pointer">
-          Read more →
-        </a>
-      </Link>
-    </Alert>
-    <Spacer></Spacer>
-    <p className="text-sm uppercase text-gray-600 mb-6">
-      Last reviewed on 2021-05-16
-    </p>
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
-
-export default Index;
+export default ({ children }) => <Container>{children}</Container>;

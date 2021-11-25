@@ -1,8 +1,5 @@
 import Container from "../components/container";
-import ReactMarkdown from "react-markdown";
-import Alert from "../components/alert";
 
-const markdownContent = `
 # Insurance
 
 The insurance companies stipulate that the office see your child's insurance
@@ -59,12 +56,5 @@ insurance company, not by our office.
 Please feel free to ask us about these changes or contact our billing department
 if you have any questions about a bill you received from our office. We can be
 reached at 617-232-2811.
-`;
 
-const Insurance = () => (
-  <Container title="Insurance">
-    <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
-  </Container>
-);
-
-export default Insurance;
+export default ({ children }) => <Container>{children}</Container>;

@@ -5,8 +5,10 @@ const HTMLParser = require("node-html-parser");
 
 const root = process.cwd();
 const dir = path.join(root, "out");
-if(!fs.existsSync(dir)) {
-  console.warn("Not building Stork index. Run `next export` after this finishes, then run `next build` again to generate the index.");
+if (!fs.existsSync(dir)) {
+  console.warn(
+    "Not building Stork index. Run `next export` after this finishes, then run `next build` again to generate the index."
+  );
   return;
 }
 
@@ -20,8 +22,8 @@ const blogPosts = files
     const slug = split[split.length - 1].replace(".html", "");
     if (slugsToIgnore.includes(slug)) return null;
     const source = fs.readFileSync(path, "utf8");
-    const title = HTMLParser.parse(source).querySelector("#stork-content h1")
-      .text;
+    const title =
+      HTMLParser.parse(source).querySelector("#stork-content h1").text;
     return {
       path,
       slug,
@@ -46,7 +48,5 @@ html_selector_override = "#stork-content"
 `
   )
   .join("")}
-[output]
-filename = "public/search-index.st"
 `
 );
