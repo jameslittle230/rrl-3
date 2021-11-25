@@ -6,10 +6,10 @@ import Button from "../components/button";
 import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
 
 export async function getStaticProps() {
-  if (process.env._system_version == "20.04") {
-    generateStorkConfig();
-    generateStorkIndex();
-  }
+  // if (process.env._system_version == "20.04") {
+  generateStorkConfig();
+  generateStorkIndex();
+  // }
 
   return { props: {} };
 }
