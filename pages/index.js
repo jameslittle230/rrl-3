@@ -3,6 +3,14 @@ import Spacer from "../components/spacer";
 import Alert from "../components/alert";
 import ReactMarkdown from "react-markdown";
 import Button from "../components/button";
+import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
+
+export async function getStaticProps() {
+  if (process.env.VERCEL == "1") {
+    generateStorkConfig();
+    generateStorkIndex();
+  }
+}
 
 const markdownContent = `
 Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
