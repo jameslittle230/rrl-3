@@ -7,7 +7,7 @@ import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
 
 export async function getStaticProps() {
   console.log(process.env);
-  if (process.env.RRL_TEST === "true") {
+  if (process.env.NETLIFY === "true") {
     generateStorkConfig();
     generateStorkIndex();
   }
