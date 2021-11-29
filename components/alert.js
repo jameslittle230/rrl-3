@@ -8,7 +8,7 @@ const Alert = ({ title, children, endContent, color }) => {
       exclamationTextColor: "text-red-300",
       headerTextColor: "text-red-900",
     },
-   
+
     yellow: {
       ringColor: "ring-yellow-400",
       bgColor: "bg-yellow-300",
@@ -44,9 +44,9 @@ const Alert = ({ title, children, endContent, color }) => {
       <div className={exclamationBackgroundClassName}>
         <span className="font-extrabold text-4xl">!</span>
       </div>
-      <div className="flex-grow">
+      <div className="alert-body-container flex-grow">
         <h1 className={headerClassName}>{title}</h1>
-        <p>{children}</p>
+        {children}
       </div>
       <div className="flex-shrink-0">{endContent}</div>
     </div>

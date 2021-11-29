@@ -19,7 +19,7 @@ const Container = (props) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <title>{join([props.title, "Drs. Roth, Rotter, and Laster"])}</title>
-        
+
         {/* http://jil.im/favicon2021 */}
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -32,7 +32,7 @@ const Container = (props) => {
       ) : null}
 
       <div className="border-t-8 border-blue-400 border-solid"></div>
-      <div className="container max-w-screen-lg mx-auto p-4">
+      <div className="container max-w-screen-lg mx-auto p-4 font-sans">
         <Header setMobileNavVisible={setMobileNavVisible} />
         <Spacer border size="large" />
         {props.belowHeader}
