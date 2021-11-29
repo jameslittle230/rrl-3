@@ -6,7 +6,7 @@ import Button from "../components/button";
 import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
 
 export async function getStaticProps() {
-  if (process.env.NETLIFY == true) {
+  if (process.env.RRL_TEST == true) {
     generateStorkConfig();
     generateStorkIndex();
   }
