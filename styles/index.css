@@ -20,3 +20,11 @@ ol ul,
 ol ol {
   @apply my-3;
 }
+
+.alert-body-container > p {
+  margin: 0;
+}
+
+.alert-body-container > p:not(:last-child) {
+  @apply mb-3;
+}

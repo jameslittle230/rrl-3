@@ -44,7 +44,7 @@ const Alert = ({ title, children, endContent, color }) => {
       <div className={exclamationBackgroundClassName}>
         <span className="font-extrabold text-4xl">!</span>
       </div>
-      <div className="flex-grow">
+      <div className="alert-body-container flex-grow">
         <h1 className={headerClassName}>{title}</h1>
         {children}
       </div>
