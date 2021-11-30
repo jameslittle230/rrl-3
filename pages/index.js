@@ -6,7 +6,6 @@ import Button from "../components/button";
 import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
 
 export async function getStaticProps() {
-  console.log(process.env);
   if (process.env.NETLIFY === "true") {
     generateStorkConfig();
     generateStorkIndex();
@@ -80,12 +79,17 @@ const Index = () => (
       <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
       <Spacer />
       <div className="block sm:flex sm:space-x-4">
-        <HomeBox title="Flu Clinic 2020">
-          We are happy to let you know that we will begin a series of multiple
-          flu vaccine clinics starting in September. We will notify you about
-          your child's scheduled day and time. We will have ample supply of
-          vaccines and will offer clinics throughout September, October, and
-          November until 100% of our patients are vaccinated.
+        <HomeBox title="Vaccine Corner">
+          We are proud of our high vaccination rate against all vaccine
+          -preventable childhood illnesses. We encourage all of our patients to
+          remain up to date with all recommended vaccines. This fall 2021 we
+          especially encourage our patients to be vaccinated against influenza
+          ("the flu") and COVID-19. We offer COVID-19 vaccines for our 5-11 year
+          old patients at our office by appointment. For our 12+ patients who
+          still need the COVID-19 vaccine, we encourage you to seek out the
+          COVID-19 vaccine at a local pharmacy or school based clinic. You can
+          find locations for vaccines at{" "}
+          <a href="https://vaxfinder.mass.gov">https://vaxfinder.mass.gov</a>.
         </HomeBox>
         <HomeBox title="Welcome to our Office!">
           New to the area? Looking for a new pediatrician? Expecting a new baby?
