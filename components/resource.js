@@ -1,4 +1,5 @@
 import Icon from "../components/icon";
+import Link from "next/link";
 
 const Resource = (props) => (
   <a
@@ -23,7 +24,11 @@ const Resource = (props) => (
 
 export const makeResourceList = (resources) => {
   return resources.map(({ file, name, subtitle }) => (
-    <Resource file={file} name={name} subtitle={subtitle} />
+    <Resource
+      url={`https://files.rothrotterlaster.com/${file}`}
+      name={name}
+      subtitle={subtitle}
+    />
   ));
 };
 
