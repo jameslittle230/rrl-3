@@ -3,6 +3,17 @@ import Spacer from "../components/spacer";
 import Alert from "../components/alert";
 import ReactMarkdown from "react-markdown";
 import Button from "../components/button";
+import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
+
+export async function getStaticProps() {
+  console.log(process.env);
+  if (process.env.NETLIFY === "true") {
+    generateStorkConfig();
+    generateStorkIndex();
+  }
+
+  return { props: {} };
+}
 
 const markdownContent = `
 Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
@@ -48,10 +59,10 @@ const Index = () => (
             </Button>
           }
         >
-          The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 12
+          The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5
           years and older.{" "}
           <strong>
-            We strongly urge all of our patients 12 years and older to get the
+            We strongly urge all of our patients 5 years and older to get the
             COVID-19 vaccine.
           </strong>
         </Alert>

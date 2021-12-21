@@ -5,3 +5,26 @@
 svg {
   display: inline;
 }
+
+ol > li::marker {
+  @apply text-gray-500;
+}
+
+ul > li::marker {
+  @apply text-gray-300 text-xl;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  @apply my-3;
+}
+
+.alert-body-container > p {
+  margin: 0;
+}
+
+.alert-body-container > p:not(:last-child) {
+  @apply mb-3;
+}

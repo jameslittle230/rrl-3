@@ -27,6 +27,7 @@ const navItems = [
   {
     href: "/resources",
     title: "Forms & Resources",
+    childrenAlwaysOpen: true,
     children: [
       { href: "https://files.rothrotterlaster.com/fever.pdf", title: "Fever" },
       {

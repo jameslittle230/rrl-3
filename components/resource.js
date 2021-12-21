@@ -1,4 +1,5 @@
 import Icon from "../components/icon";
+import Link from "next/link";
 
 const Resource = (props) => (
   <a
@@ -12,13 +13,23 @@ const Resource = (props) => (
       <Icon icon={props.icon || "doc.text"} />
     </div>
     <div className="">
-      <p className="text-lg text-gray-800 font-semibold">{props.name} →</p>
+      <p className="text-lg text-gray-800 font-semibold m-0">{props.name} →</p>
       {props.subtitle ? (
-        <p className="text-sm text-gray-600">{props.subtitle}</p>
+        <p className="text-sm text-gray-600 m-0">{props.subtitle}</p>
       ) : null}
       {props.children ? <p className="mt-4">{props.children}</p> : null}
     </div>
   </a>
 );
+
+export const makeResourceList = (resources) => {
+  return resources.map(({ file, name, subtitle }) => (
+    <Resource
+      url={`https://files.rothrotterlaster.com/${file}`}
+      name={name}
+      subtitle={subtitle}
+    />
+  ));
+};
 
 export default Resource;

@@ -1,9 +1,14 @@
 import Container from "../components/container";
-import ReactMarkdown from "react-markdown";
 import Alert from "../components/alert";
 import Address from "../components/address";
 
-const markdownContent = `
+
+# Emergencies & After Hours
+
+<Alert>
+If your child is experiencing a life-threatening emergency, please call 911 or go to your nearest Emergency Room.
+</Alert>
+
 If you would like to reach the on call physician about an urgent matter that
 cannot wait until regular office hours, we are available after 5 pm on
 weeknights, and throughout the weekend. To reach a physician please call our
@@ -22,23 +27,12 @@ child or who works closely with your child’s pediatrician.
 
 For weekend appointments your child will be seen in our office or in the
 Newton office of our weekend covering group.
-`;
 
-const EmergenciesAfterHours = () => (
-  <Container title="Emergencies and After Hours">
-    <div className="prose mb-6">
-      <h1>Emergencies &amp; After Hours</h1>
-    </div>
-    <Alert>
-      If your child is experiencing a life-threatening emergency, please call
-      911 or go to your nearest Emergency Room.
-    </Alert>
-    <ReactMarkdown className="my-5 prose">{markdownContent}</ReactMarkdown>
-    <p>Our office address is:</p>
-    <Address />
-    <p>The office of our weekend covering group in Newton Centre is:</p>
-    <Address covering />
-  </Container>
-);
+Our office address is:
+<Address />
 
-export default EmergenciesAfterHours;
+The office of our weekend covering group in Newton Centre is:
+
+<Address covering />
+
+export default ({ children }) => <Container>{children}</Container>;

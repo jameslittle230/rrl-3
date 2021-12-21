@@ -1,0 +1,81 @@
+import Resource, {makeResourceList} from "../components/resource";
+import Container from "../components/container";
+
+# Forms & Resources
+
+In this section you will find information about specific medical advice for basic problems, information about your child’s well visit form, and miscellaneous forms that you might need to download and print.
+
+## Medical Information
+
+The following are forms regarding medical care. This information does not replace actual medical advice as given by a professional and is not specific to any one child or any one medical situation.
+
+{ makeResourceList([
+  {
+    file: "fever.pdf",
+    name: "Fever",
+  },
+  {
+    file: "vomit-diarrhea.pdf",
+    name: "Vomiting or Diarrhea",
+  },
+  {
+    file: "stomach-bugs.pdf",
+    name: "How to Prevent Stomach Bugs"
+  },
+  {
+    file: "drug-dosing.pdf",
+    name: "Dosing for over-the-counter medications",
+    subtitle: "Includes Tylenol (Acetaminophen), Advil/Motrin (Ibuprofen), and Benadryl (Diphenhydramine)"
+  },
+  {
+    file: "add-checklist.pdf",
+    name: "ADHD Diagnostic Checklist"
+  },
+  {
+    file: "toilet-training.pdf",
+    name: "Toilet Training"
+  },
+  {
+    file: "starting-solids.pdf",
+    name: "Starting Solids"
+  },
+  {
+    file: "parent-feeding-styles.pdf",
+    name: "Parent Feeding Styles"
+  },
+]) }
+
+<Resource url="https://www.youtube.com/watch?v=Hl6vItGt4qQ" name="How to do your Strep Test at home (video)" icon="video" />
+
+## Well Visit Forms
+
+At the completion of your child’s routine annual check up, you will receive a general health form which will include up-to-date immunization information.  This form can be used for school, camp or sports registration, or proof of health for jobs for teens. Please keep the form you receive in a safe place and make copies to provide to school, camps, or other institutions. We highly recommend that you take a picture of this form on your phone so you have access to this form at all times.
+
+If you need additional forms completed by your physician, fill in as much of the form as you are able and submit them either in person, or in a self addressed, stamped envelope and allow 5-7 business days for completion.
+
+There is a charge to provide you with extra copies of your child’s health form.
+
+{ makeResourceList([
+  {
+    file: "new-patient.pdf",
+    name: "New Patient Information",
+  },
+  {
+    file: "family-history.pdf",
+    name: "Family History Form",
+  },
+  {
+    file: "general-consent.pdf",
+    name: "General Consent Form",
+  },
+  {
+    file: "privacy-summary.pdf",
+    name: "Notice of Privacy Practices"
+  },
+  {
+    file: "teen-consent.pdf",
+    name: "Adolescent Consent to Share Medical Information with Guardian or Parent"
+  }
+]) }
+
+export default ({ children }) => <Container>{children}</Container>;

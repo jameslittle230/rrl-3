@@ -7,7 +7,7 @@ const Search = () => {
 
   useEffect(
     () => {
-      if (stork) {
+      if (window.stork) {
         stork.register(name, "/search-index.st", {
           showProgress: false,
           forceOverwrite: true,
