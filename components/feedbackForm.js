@@ -1,13 +1,31 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-const postToEndpoint = (message, referer) => {
+const postToEndpoint = ({ text, url }) => {
   const body = {
-    message,
-    referer,
+    text: text,
+    channel: "rrl-feedback",
+    blocks: [
+      {
+        type: "section",
+        text: {
+          type: "mrkdwn",
+          text: text,
+        },
+      },
+      {
+        type: "context",
+        elements: [
+          {
+            type: "mrkdwn",
+            text: `looking at ${url}`,
+          },
+        ],
+      },
+    ],
   };
 
-  return fetch("https://almondine-brass-panda.glitch.me/", {
+  return fetch("https://api.jameslittle.me/slack", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
@@ -19,22 +37,22 @@ const postToEndpoint = (message, referer) => {
 const statusBank = {
   valueTooShort: {
     message: "Please type some feedback to send it!",
-    color: "red",
+    color: "text-red-400",
   },
 
   sendingInProgress: {
     message: "Sending feedback, please wait...",
-    color: "gray",
+    color: "text-gray-400",
   },
 
   failedToSend: {
     message: "Feedback failed to send.",
-    color: "red",
+    color: "text-red-400",
   },
 
   success: {
     message: "Sent feedback successfully!",
-    color: "green",
+    color: "text-green-400",
   },
 };
 
@@ -45,19 +63,28 @@ const FeedbackForm = () => {
 
   const NBSP_CHAR_CODE = 160;
 
+  const clearFeedbackAfter5s = () => {
+    window.setTimeout(() => {
+      setStatus({});
+    }, 5000);
+  };
+
   const submitForm = () => {
     if (message.length > 0) {
       setMessage("");
       setStatus(statusBank.sendingInProgress);
-      postToEndpoint(message, router.pathname)
+      postToEndpoint({ text: message, url: router.pathname })
         .then(() => {
           setStatus(statusBank.success);
+          clearFeedbackAfter5s();
         })
         .catch(() => {
           setStatus(statusBank.failedToSend);
+          clearFeedbackAfter5s();
         });
     } else {
       setStatus(statusBank.valueTooShort);
+      clearFeedbackAfter5s();
     }
   };
 
@@ -68,6 +95,7 @@ const FeedbackForm = () => {
         type="text"
         placeholder="Website Feedback"
         value={message}
+        autoComplete="off"
         onChange={(e) => {
           setMessage(e.target.value);
         }}
@@ -81,7 +109,7 @@ const FeedbackForm = () => {
       >
         Send
       </button>
-      <p className={`text-xs text-${status.color || "gray"}-400`}>
+      <p className={`text-xs ${status.color || "text-gray-400"}`}>
         {status.message || String.fromCharCode(NBSP_CHAR_CODE)}
       </p>
     </form>
