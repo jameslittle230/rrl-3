@@ -64,4 +64,22 @@ const Navigation = () => {
   );
 };
 
+export const currentPageTitle = () => {
+  const router = useRouter();
+  const flattenedItems = NavItems.reduce((acc, item) => {
+    const { children, href, title } = item;
+    acc = acc.concat({ href, title });
+    if (children) {
+      return acc.concat(children.map(({ href, title }) => ({ href, title })));
+    }
+    return acc;
+  }, []);
+
+  const currentPage = flattenedItems.find(
+    (item) => item.href === router.pathname
+  );
+
+  return currentPage ? currentPage.title : "";
+};
+
 export default Navigation;

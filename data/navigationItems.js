@@ -32,7 +32,7 @@ const navItems = [
       { href: "https://files.rothrotterlaster.com/fever.pdf", title: "Fever" },
       {
         href: "https://files.rothrotterlaster.com/vomit-diarrhea.pdf",
-        title: "Vomiting & Diarhhea",
+        title: "Vomiting & Diarrhea",
       },
       {
         href: "https://files.rothrotterlaster.com/drug-dosing.pdf",
