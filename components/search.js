@@ -12,7 +12,6 @@ const Search = () => {
           showProgress: false,
           forceOverwrite: true,
           onQueryUpdate: (query, results) => {
-            console.log(query, results.length);
             window._paq.push(["trackSiteSearch", query, false, results.length]);
           },
           onResultSelected: (query, result) => {
@@ -35,9 +34,9 @@ const Search = () => {
       <Head>
         <link
           rel="stylesheet"
-          href="https://files.stork-search.net/basic.css"
+          href="https://files.stork-search.net/releases/v1.4.0/basic.css"
         />
-        <script src="https://files.stork-search.net/stork.js"></script>
+        <script src="https://files.stork-search.net/releases/v1.4.0/stork.js"></script>
       </Head>
       <div className="stork-wrapper">
         <input
