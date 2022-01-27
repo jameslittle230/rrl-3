@@ -11,10 +11,6 @@ const navItems = [
     title: "COVID-19",
     children: [
       {
-        href: "/covid19/emotional-health",
-        title: "Emotional Wellbeing",
-      },
-      {
         href: "/covid19/vaccination",
         title: "Vaccination Information",
       },

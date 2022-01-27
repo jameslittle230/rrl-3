@@ -53,8 +53,8 @@ const Index = () => (
           title="COVID-19 Information"
           color="yellow"
           endContent={
-            <Button href="/covid19/vaccination" type="yellow">
-              Visit the COVID-19 Vaccination Page →
+            <Button href="/covid19" type="yellow">
+              Learn more about COVID-19 →
             </Button>
           }
         >
@@ -79,12 +79,9 @@ const Index = () => (
       <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
       <Spacer />
       <div className="block sm:flex sm:space-x-4">
-        <HomeBox title="Flu Clinic 2020">
-          We are happy to let you know that we will begin a series of multiple
-          flu vaccine clinics starting in September. We will notify you about
-          your child's scheduled day and time. We will have ample supply of
-          vaccines and will offer clinics throughout September, October, and
-          November until 100% of our patients are vaccinated.
+        <HomeBox title="Vaccination Policy">
+          We fully vaccinate all of our patients. We follow the most up to date
+          guidelines of the American Academy of Pediatrics.
         </HomeBox>
         <HomeBox title="Welcome to our Office!">
           New to the area? Looking for a new pediatrician? Expecting a new baby?
