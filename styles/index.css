@@ -28,3 +28,18 @@ ol ol {
 .alert-body-container > p:not(:last-child) {
   @apply mb-3;
 }
+
+figure {
+  @apply border-2;
+  @apply border-gray-200;
+  @apply text-center;
+  @apply p-3;
+  @apply rounded-md;
+}
+
+figure figcaption {
+  @apply text-gray-500;
+  @apply uppercase;
+  @apply font-bold;
+  @apply text-sm;
+}

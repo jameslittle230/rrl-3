@@ -74,15 +74,15 @@ const About = () => (
         since="1991"
         imageUrl="/images/linda.jpg"
       />
-      <StaffProfile name="Lin Kenney" since="1991" imageUrl="/images/lin.jpg" />
+      <StaffProfile name="Lin Kenney" since="1995" imageUrl="/images/lin.jpg" />
       <StaffProfile
         name="Melissa Moroney-Barzey"
-        since="1991"
+        since="1999"
         imageUrl="/images/melissa.jpg"
       />
       <StaffProfile
         name="Courtney Ferretti"
-        since="1991"
+        since="2018"
         imageUrl="/images/courtney.jpg"
       />
     </div>
