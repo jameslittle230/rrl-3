@@ -15,23 +15,7 @@ export async function getStaticProps() {
 }
 
 const markdownContent = `
-Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
-pediatricians in a small, private practice in Brookline, Massachusetts
-and we are dedicated to taking excellent and personal care of our
-patients. We are all Board Certified by the American Board of
-Pediatrics. We are affiliated with Boston Children's Hospital and are
-proud members of the PPOC (Pediatric Physicians Organization at
-Children's), Boston Children's Hospital's only preferred primary care
-provider network. 
-
-## Why choose us? 
-
-Our patients choose us because they
-know they will get excellent medical care in a personalized office. We
-have access to the most up to date pediatric information in the country
-through our strong affiliation with Boston Children’s Hospital, and in
-our intimate office setting we can easily maintain close, long term
-health relationships with our families.`;
+`;
 
 const HomeBox = (props) => (
   <div className="rounded ring ring-blue-300 flex-shrink mb-4 sm:mb-0 sm:w-1/2">
@@ -58,12 +42,12 @@ const Index = () => (
             </Button>
           }
         >
-          The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5
-          years and older.{" "}
-          <strong>
-            We strongly urge all of our patients 5 years and older to get the
-            COVID-19 vaccine.
-          </strong>
+          <ReactMarkdown>
+            The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5
+            years and older. **We strongly urge all of our patients 5 years and
+            older to get the COVID-19 vaccine.** We have vaccines available for
+            patients of all approved ages.
+          </ReactMarkdown>
         </Alert>
         <Spacer />
       </>
@@ -76,7 +60,25 @@ const Index = () => (
         alt="An image of the facade of 637 Washington Street"
       />
       <Spacer />
-      <ReactMarkdown className="prose">{markdownContent}</ReactMarkdown>
+      <ReactMarkdown className="prose">
+        {`Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
+        pediatricians in a small, private practice in Brookline, Massachusetts
+        and we are dedicated to taking excellent and personal care of our
+        patients. We are all Board Certified by the American Board of
+        Pediatrics. We are affiliated with Boston Children's Hospital and are
+        proud members of the PPOC (Pediatric Physicians Organization at
+        Children's), Boston Children's Hospital's only preferred primary care
+        provider network. 
+        
+## Why choose us? 
+        
+Our patients choose us because they
+        know they will get excellent medical care in a personalized office. We
+        have access to the most up to date pediatric information in the country
+        through our strong affiliation with Boston Children's Hospital, and in
+        our intimate office setting we can easily maintain close, long term
+        health relationships with our families.`}
+      </ReactMarkdown>
       <Spacer />
       <div className="block sm:flex sm:space-x-4">
         <HomeBox title="Vaccination Policy">
