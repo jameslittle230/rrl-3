@@ -34,19 +34,17 @@ const Index = () => (
     belowHeader={
       <>
         <Alert
-          title="COVID-19 Information"
+          title="Formula Shortage Information"
           color="yellow"
           endContent={
-            <Button href="/covid19" type="yellow">
-              Learn more about COVID-19 →
+            <Button href="/formula-shortage" type="yellow">
+              Formula Shortage Resources
             </Button>
           }
         >
           <ReactMarkdown>
-            The Pfizer-BioNTech COVID-19 vaccine is now approved for patients 5
-            years and older. **We strongly urge all of our patients 5 years and
-            older to get the COVID-19 vaccine.** We have vaccines available for
-            patients of all approved ages.
+            If you or someone you know can't find infant formula for your baby, 
+            there are resources available.
           </ReactMarkdown>
         </Alert>
         <Spacer />
