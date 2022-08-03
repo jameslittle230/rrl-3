@@ -1,4 +1,3 @@
-import { push } from "@socialgouv/matomo-next";
 import Head from "next/head";
 import { useEffect } from "react";
 
@@ -11,18 +10,6 @@ const Search = () => {
         stork.register(name, "/search-index.st", {
           showProgress: false,
           forceOverwrite: true,
-          onQueryUpdate: (query, results) => {
-            window._paq.push(["trackSiteSearch", query, false, results.length]);
-          },
-          onResultSelected: (query, result) => {
-            push([
-              "trackContentInteraction",
-              "tabActivated",
-              query,
-              result.entry.title,
-              result.entry.url,
-            ]);
-          },
         });
       }
     },
