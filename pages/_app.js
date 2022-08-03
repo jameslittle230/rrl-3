@@ -1,18 +1,7 @@
-import { useEffect } from "react";
 import Link from "next/link";
-import { init, push } from "@socialgouv/matomo-next";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 import "../styles/index.css";
-
-const matomoData = {
-  url: "https://analytics.jameslittle.me",
-  siteId: "1",
-};
-
-const fancyH1 = ({ children }) => (
-  <h6 className="font-bold">
-    <em>{children}</em>
-  </h6>
-);
 
 const components = {
   h1: ({ children }) => (
@@ -40,9 +29,15 @@ const components = {
 };
 
 export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+
   useEffect(() => {
-    init(matomoData);
-    push("enableHeartBeatTimer");
-  }, []);
+    if (typeof window !== "undefined") {
+      window.goatcounter.count({
+        path: router.asPath,
+      });
+    }
+  }, [router]);
+
   return <Component components={components} {...pageProps} />;
 }
