@@ -32,7 +32,10 @@ export default function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
+    if (
+      typeof window !== "undefined" &&
+      typeof window.goatcounter !== "undefined"
+    ) {
       window.goatcounter.count({
         path: router.asPath,
       });
