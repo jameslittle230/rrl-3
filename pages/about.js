@@ -74,7 +74,6 @@ const About = () => (
         since="1991"
         imageUrl="/images/linda.jpg"
       />
-      <StaffProfile name="Lin Kenney" since="1995" imageUrl="/images/lin.jpg" />
       <StaffProfile
         name="Melissa Moroney-Barzey"
         since="1999"
@@ -84,6 +83,11 @@ const About = () => (
         name="Courtney Ferretti"
         since="2018"
         imageUrl="/images/courtney.jpg"
+      />
+      <StaffProfile
+        name="Idalia Peña"
+        since="2022"
+        imageUrl="/images/idalia.jpg"
       />
     </div>
   </Container>
