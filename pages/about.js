@@ -64,7 +64,7 @@ const About = () => (
       Directors of the Pediatric Physicians Organization of Children’s Hospital.
     </Profile>
 
-    <Profile name="Magdalena Ivanova, MD" imageUrl="/images/ivanova.jpg">
+    <Profile name="Magdalena D. Ivanova, MD" imageUrl="/images/ivanova.jpg">
       Dr. Ivanova is a board-certified pediatrician who joined Drs. Roth,
       Rotter, & Laster in 2023. She received her Bachelor of Arts degree in
       Biology from the University of Chicago and her medical degree from Harvard
