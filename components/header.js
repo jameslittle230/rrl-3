@@ -13,9 +13,9 @@ const Header = (props) => (
   <div className="flex justify-between space-x-0 md:space-x-8">
     <div className="w-full">
       <div className="flex justify-between items-start">
-        <h1 className="text-blue-600 hover:text-blue-800 font-serif text-3xl md:text-4xl lg:text-5xl font-extrabold mb-2">
+        <h1 className="text-blue-600 hover:text-blue-800 font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold mb-2">
           <Link href="/" passHref>
-            Drs. Roth, Rotter, &amp;&nbsp;Laster
+            Drs. Roth, Rotter, Laster &amp;&nbsp;Ivanova
           </Link>
         </h1>
         <button
@@ -29,7 +29,10 @@ const Header = (props) => (
       </div>
 
       <div className="lg:text-lg">
-        <HeaderLine icon="mappin.circle.fill" text="637 Washington Street • Suite 202 • Brookline MA 02446" />
+        <HeaderLine
+          icon="mappin.circle.fill"
+          text="637 Washington Street • Suite 202 • Brookline MA 02446"
+        />
         <div className="flex space-x-6">
           <HeaderLine icon="phone.fill" text="(617) 232-2811" />
           <HeaderLine icon="faxmachine" text="(617) 383-8178" />

@@ -4,6 +4,7 @@ import Alert from "../components/alert";
 import ReactMarkdown from "react-markdown";
 import Button from "../components/button";
 import { generateStorkConfig, generateStorkIndex } from "../lib/stork";
+import Link from "next/link";
 
 export async function getStaticProps() {
   if (process.env.NETLIFY === "true") {
@@ -14,17 +15,12 @@ export async function getStaticProps() {
   return { props: {} };
 }
 
-const markdownContent = `
-`;
-
 const HomeBox = (props) => (
   <div className="rounded ring ring-blue-300 flex-shrink mb-4 sm:mb-0 sm:w-1/2">
     <div className="bg-blue-200 p-3 font-bold text-lg rounded-tl rounded-tr">
       {props.title}
     </div>
-    <div className="p-3 prose-sm">
-      <p className="my-0">{props.children}</p>
-    </div>
+    <div className="p-3 prose prose-sm">{props.children}</div>
   </div>
 );
 
@@ -34,19 +30,11 @@ const Index = () => (
     belowHeader={
       <>
         <Alert
-          title="Formula Shortage Information"
-          color="yellow"
-          endContent={
-            <Button href="/formula-shortage" type="yellow">
-              Formula Shortage Resources
-            </Button>
-          }
-        >
-          <ReactMarkdown>
-            If you or someone you know can't find infant formula for your baby, 
-            there are resources available.
-          </ReactMarkdown>
-        </Alert>
+          className="mb-5"
+          color="green"
+          title="We are currently accepting new patients!"
+          icon="check"
+        ></Alert>
         <Spacer />
       </>
     }
@@ -59,7 +47,7 @@ const Index = () => (
       />
       <Spacer />
       <ReactMarkdown className="prose">
-        {`Welcome to the office of Drs. Roth, Rotter, and Laster. We are 3
+        {`Welcome to the office of Drs. Roth, Rotter, Laster, and Ivanova. We are 4
         pediatricians in a small, private practice in Brookline, Massachusetts
         and we are dedicated to taking excellent and personal care of our
         patients. We are all Board Certified by the American Board of
@@ -80,14 +68,26 @@ Our patients choose us because they
       <Spacer />
       <div className="block sm:flex sm:space-x-4">
         <HomeBox title="Vaccination Policy">
-          We fully vaccinate all of our patients. We follow the most up to date
-          guidelines of the American Academy of Pediatrics.
+          <p>
+            We fully vaccinate all of our patients. We follow the most up to
+            date guidelines of the American Academy of Pediatrics. We are proud
+            of our commitment to vaccinating against vaccine preventable
+            disease.
+          </p>
+
+          <p>
+            <Link href={"#"}>Vaccine information sheets →</Link>
+          </p>
         </HomeBox>
         <HomeBox title="Welcome to our Office!">
-          New to the area? Looking for a new pediatrician? Expecting a new baby?
-          We are thrilled to welcome new patients into our practice! Please call
-          our office at (617) 232-2811 to arrange for a visit. Our staff is here
-          and ready to help you.
+          <p>
+            New to the area? Looking for a new pediatrician? Expecting a new
+            baby? We are thrilled to welcome new patients into our practice!
+          </p>
+          <p>
+            Please call our office at (617) 232-2811 to arrange for a visit. Our
+            staff is here and ready to help you.
+          </p>
         </HomeBox>
       </div>
     </>
