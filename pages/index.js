@@ -76,7 +76,7 @@ Our patients choose us because they
           </p>
 
           <p>
-            <Link href={"#"}>Vaccine information sheets →</Link>
+            <Link href={"/resources#vis"}>Vaccine information sheets →</Link>
           </p>
         </HomeBox>
         <HomeBox title="Welcome to our Office!">

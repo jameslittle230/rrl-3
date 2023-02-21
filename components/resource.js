@@ -22,7 +22,19 @@ const Resource = (props) => (
   </a>
 );
 
-export const makeResourceList = (resources) => {
+export const makeResourceList = (resources, tag) => {
+  if (tag === "li") {
+    return resources.map(({ file, name, subtitle }) => (
+      <li className="prose">
+        <Link
+          target="_blank"
+          href={`https://files.rothrotterlaster.com/${file}`}
+        >
+          {name}
+        </Link>
+      </li>
+    ));
+  }
   return resources.map(({ file, name, subtitle }) => (
     <Resource
       url={`https://files.rothrotterlaster.com/${file}`}

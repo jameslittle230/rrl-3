@@ -78,4 +78,72 @@ There is a charge to provide you with extra copies of your child’s health form
   }
 ]) }
 
+<div id="vis" />
+## Vaccine Information Sheets
+
+{ makeResourceList([
+  {
+    file: "vaccines/multi.pdf",
+    name: "Your Child's First Vaccines",
+  },
+  {
+    file: "vaccines/hepatitis_b.pdf",
+    name: "Hepatitis B",
+  },
+  {
+    file: "vaccines/hib.pdf",
+    name: "Haemophilus influenzae type b (Hib)",
+  },
+  {
+    file: "vaccines/pcv.pdf",
+    name: "PCV"
+  },
+  {
+    file: "vaccines/polio_ipv.pdf",
+    name: "Polio"
+  },
+  {
+    file: "vaccines/rotavirus.pdf",
+    name: "Rotavirus"
+  },
+  {
+    file: "vaccines/dtap.pdf",
+    name: "DTaP"
+  },
+  {
+    file: "vaccines/hepatitis_a.pdf",
+    name: "Hepatitis A"
+  },
+  {
+    file: "vaccines/varicella.pdf",
+    name: "Varicella (chickenpox)"
+  },
+  {
+    file: "vaccines/mmr.pdf",
+    name: "MMR"
+  },
+  {
+    file: "vaccines/hpv.pdf",
+    name: "HPV"
+  },
+  {
+    file: "vaccines/tdap.pdf",
+    name: "Tdap"
+  },
+  {
+    file: "vaccines/meningococcal_acwy.pdf",
+    name: "Meningococcal ACWY"
+  },
+  {
+    file: "vaccines/td.pdf",
+    name: "Td"
+  },
+  {
+    file: "vaccines/flu_inactive.pdf",
+    name: "Flu"
+  },
+], 'li') }
+
+
+
 export default ({ children }) => <Container>{children}</Container>;
