@@ -1,4 +1,4 @@
-const Alert = ({ title, children, endContent, color }) => {
+const Alert = ({ title, children, endContent, color, icon }) => {
   const data = {
     red: {
       ringColor: "ring-red-400",
@@ -16,6 +16,15 @@ const Alert = ({ title, children, endContent, color }) => {
       exclamationBgColor: "bg-yellow-800",
       exclamationTextColor: "text-yellow-300",
       headerTextColor: "text-yellow-900",
+    },
+
+    green: {
+      ringColor: "ring-green-400",
+      bgColor: "bg-green-300",
+      textColor: "text-green-800",
+      exclamationBgColor: "bg-green-800",
+      exclamationTextColor: "text-green-300",
+      headerTextColor: "text-green-900",
     },
   };
 
@@ -39,10 +48,15 @@ const Alert = ({ title, children, endContent, color }) => {
 
   const headerClassName = `${headerTextColor} font-bold text-lg`;
 
+  let iconCharacter = "!";
+  if (icon == "check") {
+    iconCharacter = "✓";
+  }
+
   return (
     <div className={containerClassName}>
       <div className={exclamationBackgroundClassName}>
-        <span className="font-extrabold text-4xl">!</span>
+        <span className="font-extrabold text-4xl">{iconCharacter}</span>
       </div>
       <div className="alert-body-container flex-grow">
         <h1 className={headerClassName}>{title}</h1>

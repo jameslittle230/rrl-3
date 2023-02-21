@@ -33,6 +33,15 @@ const Button = (props) => {
       activeGradientFrom: "active:from-blue-300",
       textColor: "text-blue-900",
     },
+
+    green: {
+      borderColor: "border-green-500",
+      bgGradientFrom: "from-green-100",
+      bgGradientTo: "to-green-200",
+      hoverGradientFrom: "hover:from-green-50",
+      activeGradientFrom: "active:from-green-300",
+      textColor: "text-green-900",
+    },
   };
 
   const {
