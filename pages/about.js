@@ -90,11 +90,6 @@ const About = () => (
         imageUrl="/images/melissa.jpg"
       />
       <StaffProfile
-        name="Courtney Ferretti"
-        since="2018"
-        imageUrl="/images/courtney.jpg"
-      />
-      <StaffProfile
         name="Idalia Peña"
         since="2022"
         imageUrl="/images/idalia.jpg"
