@@ -20,7 +20,7 @@ const Footer = () => {
           <img
             className="inline mb-8 sm:w-64 flex-grow-0 ring ring-gray-200"
             src="/images/ppoc.jpg"
-            alt="Drs. Roth, Rotter and Laster are preferred Boston Children's Hospital Community of Care members."
+            alt="Drs. Roth, Rotter, Laster and Ivanova are preferred Boston Children's Hospital Community of Care members."
           />
         </div>
       </div>
