@@ -27,5 +27,8 @@
     "start": "next start",
     "lint": "next lint",
     "serve-out": "http-server -p 8000 out"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
