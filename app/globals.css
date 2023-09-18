@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+svg {
+  display: inline;
+}
+
+ol > li::marker {
+  @apply text-gray-500;
+}
+
+ul > li::marker {
+  @apply text-gray-300 text-xl;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  @apply my-3;
+}
+
+.alert-body-container > p {
+  margin: 0;
+}
+
+.alert-body-container > p:not(:last-child) {
+  @apply mb-3;
+}
+
+figure {
+  @apply border-2;
+  @apply border-gray-200;
+  @apply text-center;
+  @apply p-3;
+  @apply rounded-md;
+}
+
+figure figcaption {
+  @apply text-gray-500;
+  @apply uppercase;
+  @apply font-bold;
+  @apply text-sm;
+} */

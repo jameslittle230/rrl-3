@@ -1,4 +1,0 @@
-- Update dependencies
-- Remove Stork integration
-- Publish on Render
-- Typescript?
