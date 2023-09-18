@@ -1,5 +1,3 @@
-import FeedbackForm from "./FeedbackForm";
-
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -17,9 +15,6 @@ const Footer = () => {
             Ivanova
           </p>
           <p>Photos by Sari Rotter &amp; Bill Gardner</p>
-          {/* <div className="mt-2">
-            <FeedbackForm />
-          </div> */}
         </div>
         <div>
           <img
