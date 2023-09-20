@@ -1,14 +1,4 @@
-import {
-  ReactElement,
-  JSXElementConstructor,
-  ReactNode,
-  ReactPortal,
-  PromiseLikeOfReactNode,
-} from "react";
-import Icon from "./icon";
-import Link from "next/link";
-
-export const Resource = (props: {
+const Resource = (props: {
   url: string;
   icon?: any;
   name: string;
@@ -34,3 +24,5 @@ export const Resource = (props: {
     </div>
   </a>
 );
+
+export default Resource;
