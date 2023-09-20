@@ -2,7 +2,6 @@ export interface NavItem {
   href: string;
   title: string;
   children?: NavItem[];
-  childrenAlwaysOpen?: boolean;
   mobileOnly?: boolean;
 }
 
@@ -22,17 +21,12 @@ export const navItems: NavItem[] = [
   {
     href: "/resources",
     title: "Forms & Resources",
-    childrenAlwaysOpen: true,
     children: [
-      { href: "https://files.rothrotterlaster.com/fever.pdf", title: "Fever" },
-      {
-        href: "https://files.rothrotterlaster.com/vomit-diarrhea.pdf",
-        title: "Vomiting & Diarrhea",
-      },
-      {
-        href: "https://files.rothrotterlaster.com/drug-dosing.pdf",
-        title: "Medication Dosing",
-      },
+      { href: "/resources/behavioral", title: "Behavioral Health" },
+      { href: "/resources/well-child", title: "Well Child" },
+      { href: "/resources/illness", title: "Illness" },
+      { href: "/resources/medication", title: "Medication Dosing" },
+      { href: "/resources/vaccines", title: "Vaccine Information" },
     ],
   },
   { href: "/policies", title: "Office Policies" },
