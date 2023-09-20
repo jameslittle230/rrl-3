@@ -1,3 +1,4 @@
+import React from "react";
 import Icon from "./Icon";
 
 const Address = (props: { covering?: boolean }) => {
@@ -33,12 +34,15 @@ const Address = (props: { covering?: boolean }) => {
   const linkClassNames = `block p-4 hover:bg-gray-100 rounded-r-lg`;
 
   return (
-    <div className="not-prose border-gray-300 border-4 border-solid rounded-xl grid grid-cols-2 my-4">
-      <div className="border-gray-300 border-r-4 border-solid p-4 row-span-2 leading-snug font-bold">
+    <div className="not-prose border-gray-300 border-4 border-solid rounded-xl grid md:grid-cols-2 my-4">
+      <address className="border-gray-300 border-b-4 md:border-b-0 md:border-r-4 border-solid p-4 row-span-2 leading-snug font-bold not-italic">
         {datumToUse.addressLines.map((line) => (
-          <p key={line}>{line}</p>
+          <React.Fragment key={line}>
+            {line}
+            <br />
+          </React.Fragment>
         ))}
-      </div>
+      </address>
       <a
         className={
           linkClassNames +

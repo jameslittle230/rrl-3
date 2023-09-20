@@ -19,7 +19,7 @@ export const MobileNavigation = () => {
     return (
       <button
         onClick={() => setVisible(true)}
-        className="fixed top-3 right-3 bg-gray-100 rounded-full px-3 py-2 text-4xl text-gray-700 md:hidden"
+        className="fixed top-3 right-3 bg-gray-100 rounded-full px-3 py-2 text-4xl text-gray-700 md:hidden outline outline-1 outline-gray-200"
       >
         <Icon icon="ellipsis.rectangle" />
       </button>

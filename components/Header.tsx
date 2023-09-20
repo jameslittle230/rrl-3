@@ -24,8 +24,10 @@ const Header = () => (
   <header className="flex justify-between space-x-0 md:space-x-8">
     <div className="w-10/12">
       <div className="flex justify-between items-start">
-        <h1 className="text-blue-600 hover:text-blue-800 font-serif text-2xl md:text-3xl lg:text-4xl font-extrabold mb-2">
-          <Link href="/">Drs. Roth, Rotter, Laster &amp;&nbsp;Ivanova</Link>
+        <h1 className="text-blue-600 hover:text-blue-800 font-serif text-3xl md:text-4xl lg:text-4xl mb-1">
+          <Link href="/">
+            Drs. Roth, Rotter, Laster&nbsp;&amp;&nbsp;Ivanova
+          </Link>
         </h1>
       </div>
 

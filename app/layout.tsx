@@ -30,6 +30,8 @@ export const metadata: Metadata = {
       "Dr. Sally Roth, Dr. Sari Rotter, Dr. Susan Laster, and Dr. Magdalena Ivanova",
   },
 
+  themeColor: "#1f2937",
+
   description: "Pediatricians in Brookline, MA",
 };
 

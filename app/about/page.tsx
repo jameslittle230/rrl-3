@@ -67,11 +67,7 @@ export default function Page() {
           since="1999"
           imageUrl="/images/melissa.jpg"
         />
-        <StaffProfile
-          name="Courtney Ferretti"
-          since="2018"
-          imageUrl="/images/courtney.jpg"
-        />
+
         <StaffProfile
           name="Idalia Peña"
           since="2022"
