@@ -37,7 +37,7 @@ const Header = () => (
             className={"underline md:no-underline"}
           />
         </Link>
-        <div className="flex space-x-6">
+        <div className="flex gap-x-6 flex-wrap">
           <HeaderLine
             icon="phone.fill"
             text="(617) 232-2811"

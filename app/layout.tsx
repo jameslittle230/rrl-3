@@ -4,6 +4,10 @@ import Footer from "@/components/Footer";
 import { Navigation } from "@/components/navigation/DesktopNavigation";
 
 import { Inter, DM_Serif_Display } from "next/font/google";
+import "./globals.css";
+import GoatCounter from "@/components/GoatCounter";
+import { Metadata } from "next";
+import { MobileNavigation } from "@/components/navigation/MobileNavigation";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,11 +22,6 @@ const dmSerifDisplay = DM_Serif_Display({
   variable: "--font-dm-serif-display",
   weight: "400",
 });
-
-import "./globals.css";
-import GoatCounter from "@/components/GoatCounter";
-import Head from "next/head";
-import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
@@ -44,13 +43,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container max-w-screen-lg mx-auto p-4">
           <Header />
           <Spacer border size="large" />
-          <div className="grid grid-cols-[max-content_1fr] gap-8">
+          <div className="block md:grid grid-cols-[max-content_1fr] gap-8">
             <Navigation />
             <main className="w-full">{children}</main>
           </div>
         </div>
         <Footer />
         <GoatCounter />
+        <MobileNavigation />
       </body>
     </html>
   );

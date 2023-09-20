@@ -3,7 +3,7 @@ import { navItems } from "../../data/navigationItems";
 
 export const Navigation = () => {
   return (
-    <nav className="w-fit">
+    <nav className="w-fit hidden md:block">
       <ul>
         {navItems
           .filter((item) => !item.mobileOnly)
