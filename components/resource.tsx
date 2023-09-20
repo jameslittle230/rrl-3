@@ -38,7 +38,7 @@ const Resource = (props: {
 export const makeResourceList = (resources, tag) => {
   if (tag === "li") {
     return resources.map(({ file, name, subtitle }) => (
-      <li className="prose">
+      <li className="prose" key={file}>
         <Link
           target="_blank"
           href={`https://files.rothrotterlaster.com/${file}`}
@@ -50,6 +50,7 @@ export const makeResourceList = (resources, tag) => {
   }
   return resources.map(({ file, name, subtitle }) => (
     <Resource
+      key={file}
       url={`https://files.rothrotterlaster.com/${file}`}
       name={name}
       subtitle={subtitle}

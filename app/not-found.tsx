@@ -14,7 +14,7 @@ export default function Page() {
         If you think this is an error, please let us know! Otherwise, use the
         navigation links to get back to somewhere familiar.
       </p>
-      <img src="/images/404.jpg" />
+      <img src="/images/404.jpg" alt="A stock photo of a crying child" />
     </div>
   );
 }
