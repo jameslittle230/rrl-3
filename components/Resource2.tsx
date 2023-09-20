@@ -8,7 +8,7 @@ import {
 import Icon from "./icon";
 import Link from "next/link";
 
-const Resource = (props: {
+export const Resource = (props: {
   url: string;
   icon?: any;
   name: string;
@@ -34,28 +34,3 @@ const Resource = (props: {
     </div>
   </a>
 );
-
-export const makeResourceList = (resources, tag) => {
-  if (tag === "li") {
-    return resources.map(({ file, name, subtitle }) => (
-      <li className="prose" key={file}>
-        <Link
-          target="_blank"
-          href={`https://files.rothrotterlaster.com/${file}`}
-        >
-          {name}
-        </Link>
-      </li>
-    ));
-  }
-  return resources.map(({ file, name, subtitle }) => (
-    <Resource
-      key={file}
-      url={`https://files.rothrotterlaster.com/${file}`}
-      name={name}
-      subtitle={subtitle}
-    />
-  ));
-};
-
-export default Resource;
