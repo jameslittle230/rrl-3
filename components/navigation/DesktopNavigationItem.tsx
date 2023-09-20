@@ -4,6 +4,7 @@ import classnames from "classnames";
 import { NavItem } from "@/data/navigationItems";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Icon from "../Icon";
 
 export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
   const { href, title, childrenAlwaysOpen, children } = item;
@@ -24,7 +25,7 @@ export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
         })}
       >
         {title}
-        {/* {!isExternalLink ? <Icon icon="arrow.up.right.square" /> : null} */}
+        {isExternalLink ? <Icon icon="arrow.up.right.square" /> : null}
       </Link>
     </li>
   );

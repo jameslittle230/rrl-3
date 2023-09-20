@@ -1,4 +1,4 @@
-import Icon from "./icon";
+import Icon from "./Icon";
 
 const Address = (props: { covering?: boolean }) => {
   const data = {
@@ -46,8 +46,8 @@ const Address = (props: { covering?: boolean }) => {
         }
         href={datumToUse.googleUrl}
       >
-        <p>
-          {/* <Icon icon="logo.google" />  */}
+        <p className="flex gap-2">
+          <Icon icon="logo.google" />
           View on Google Maps →
         </p>
       </a>
@@ -55,8 +55,8 @@ const Address = (props: { covering?: boolean }) => {
         className={linkClassNames + " rounded-tr-none"}
         href={datumToUse.appleUrl}
       >
-        <p>
-          {/* <Icon icon="logo.apple" />  */}
+        <p className="flex gap-2">
+          <Icon icon="logo.apple" />
           View on Apple Maps →
         </p>
       </a>

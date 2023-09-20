@@ -1,3 +1,5 @@
+import Icon from "./Icon";
+
 const Resource = (props: {
   url: string;
   icon?: any;
@@ -13,7 +15,7 @@ const Resource = (props: {
     flex space-x-4 items-center hover:bg-gray-100`}
   >
     <div className="flex-shrink text-4xl">
-      {/* <Icon icon={props.icon || "doc.text"} /> */}
+      <Icon icon={props.icon || "doc.text"} />
     </div>
     <div className="">
       <p className="text-lg text-gray-800 font-semibold m-0">{props.name} →</p>
