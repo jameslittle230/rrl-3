@@ -1,5 +1,5 @@
 import Header from "@/components/Header";
-import Spacer from "@/components/spacer";
+import Spacer from "@/components/Spacer2";
 import Footer from "@/components/Footer";
 import { Navigation } from "@/components/navigation/DesktopNavigation";
 

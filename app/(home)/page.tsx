@@ -1,7 +1,7 @@
-import Spacer from "@/components/spacer";
+import Spacer from "@/components/Spacer2";
 import Link from "next/link";
 import HomeContent from "./home-content.mdx";
-import Alert from "@/components/alert";
+import Alert from "@/components/Alert2";
 import { Metadata } from "next";
 
 const HomeBox = (props) => (

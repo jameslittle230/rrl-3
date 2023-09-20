@@ -1,5 +1,5 @@
 import Icon from "./icon";
-import Button from "./button";
+import Button from "./Button2";
 import Link from "next/link";
 
 const HeaderLine = ({ icon, text }) => (
