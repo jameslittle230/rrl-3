@@ -55,11 +55,11 @@ const Alert = ({
 
   const containerClassName = `
   not-prose
-  rounded px-5 py-3
+  rounded px-5 md:py-3 py-2
   ring ${ringColor} ${bgColor} ${textColor} 
   text-sm
-  justify-between flex-column space-y-4
-  md:flex md:items-center md:flex-row md:items-middle md:space-y-0 md:space-x-4`;
+  justify-between flex-column gap-y-4
+  flex md:items-center md:flex-row md:items-middle md:space-y-0 md:space-x-4`;
 
   const exclamationBackgroundClassName = `hidden md:block h-10 w-10 
   flex-shrink-0 text-center ${exclamationBgColor} ${exclamationTextColor} rounded-full`;
