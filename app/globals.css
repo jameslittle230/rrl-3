@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+svg {
+  display: inline;
+}
+
+.prose .resource {
+  margin-top: 1.25rem;
+}
+
+.resource-grid .resource {
+  margin-top: 0;
+}
