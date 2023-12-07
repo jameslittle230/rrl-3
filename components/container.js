@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Navigation, { currentPageTitle } from "../components/navigation";
+import Navigation, {currentPageTitle} from "../components/navigation";
 import MobileNavigation from "../components/mobileNavigation";
 import Header from "../components/header";
 import Spacer from "../components/spacer";
@@ -18,9 +18,7 @@ const Container = (props) => {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-        <title>
-          {join([currentPageTitle(), "Drs. Roth, Rotter, Laster and Ivanova"])}
-        </title>
+        <title>{join([currentPageTitle(), "Drs. Roth, Rotter, and Laster"])}</title>
 
         {/* http://jil.im/favicon2021 */}
         <link rel="icon" href="/favicon.ico" />

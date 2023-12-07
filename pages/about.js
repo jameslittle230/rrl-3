@@ -36,7 +36,7 @@ const About = () => (
   <Container title="About the Office">
     <div className="prose">
       <h1>About the Office</h1>
-      <p>Welcome to the office of Drs. Roth, Rotter, Laster and Ivanova.</p>
+      <p>Welcome to the office of Drs. Roth, Rotter, and Laster.</p>
     </div>
     <Profile name="Sally S. Roth, MD" imageUrl="/images/roth.jpg">
       Dr. Roth is a graduate of Smith College and Case Western Reserve Medical
@@ -88,6 +88,11 @@ const About = () => (
         name="Melissa Moroney-Barzey"
         since="1999"
         imageUrl="/images/melissa.jpg"
+      />
+      <StaffProfile
+        name="Courtney Ferretti"
+        since="2018"
+        imageUrl="/images/courtney.jpg"
       />
       <StaffProfile
         name="Idalia Peña"
