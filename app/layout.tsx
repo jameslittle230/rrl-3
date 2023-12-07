@@ -35,15 +35,18 @@ export const metadata: Metadata = {
   description: "Pediatricians in Brookline, MA",
 };
 
+const BetaBadge = () => (
+  <div className="fixed inline bg-red-700 px-24 py-1 font-bold text-white rotate-45 right-[-3.5rem] top-10 uppercase">
+    Beta!
+  </div>
+);
+
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <body
         className={`${inter.variable} ${dmSerifDisplay.variable} font-sans`}
       >
-        <div className="fixed inline bg-red-700 px-24 py-1 font-bold text-white rotate-45 right-[-3.5rem] top-10 uppercase">
-          Beta!
-        </div>
         <div className="border-t-8 border-blue-400 border-solid"></div>
         <div className="container max-w-screen-lg mx-auto p-4">
           <Header />

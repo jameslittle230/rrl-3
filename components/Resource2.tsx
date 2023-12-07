@@ -10,8 +10,8 @@ const Resource = (props: {
   <a
     href={props.url}
     target="_blank"
-    className={`p-4 rounded-xl
-    border-4 border-gray-400 border-solid
+    className={`resource p-4 rounded-xl
+    border-4 border-gray-300 border-solid
     flex space-x-4 items-center hover:bg-gray-100`}
   >
     <div className="flex-shrink text-4xl">
