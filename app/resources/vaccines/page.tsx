@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Content from "./vaccines.mdx";
 
 export const metadata: Metadata = {
-  title: "Behavioral Health",
+  title: "Vaccine Information Sheets",
 };
 
 export default function Page() {
