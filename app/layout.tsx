@@ -6,7 +6,7 @@ import { Navigation } from "@/components/navigation/DesktopNavigation";
 import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import GoatCounter from "@/components/GoatCounter";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import { MobileNavigation } from "@/components/navigation/MobileNavigation";
 
 const inter = Inter({
@@ -30,16 +30,12 @@ export const metadata: Metadata = {
       "Dr. Sally Roth, Dr. Sari Rotter, Dr. Susan Laster, and Dr. Magdalena Ivanova",
   },
 
-  themeColor: "#1f2937",
-
   description: "Pediatricians in Brookline, MA",
 };
 
-const BetaBadge = () => (
-  <div className="fixed inline bg-red-700 px-24 py-1 font-bold text-white rotate-45 right-[-3.5rem] top-10 uppercase">
-    Beta!
-  </div>
-);
+export const viewport: Viewport = {
+  themeColor: "#1f2937",
+}
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
