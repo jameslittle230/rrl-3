@@ -1,13 +1,12 @@
-import { useRouter } from "next/router";
+"use client";
+
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const postToEndpoint = (message, referer) => {
-  const body = {
-    message,
-    referer,
-  };
+  const body = { text: message };
 
-  return fetch("https://almondine-brass-panda.glitch.me/", {
+  return fetch("https://api.jameslittle.me/slack", {
     method: "POST",
     headers: {
       "Content-Type": "application/json; charset=utf-8",
@@ -39,17 +38,15 @@ const statusBank = {
 };
 
 const FeedbackForm = () => {
-  const router = useRouter();
+  const pathname = usePathname();
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState({});
-
-  const NBSP_CHAR_CODE = 160;
 
   const submitForm = () => {
     if (message.length > 0) {
       setMessage("");
       setStatus(statusBank.sendingInProgress);
-      postToEndpoint(message, router.pathname)
+      postToEndpoint(message, pathname)
         .then(() => {
           setStatus(statusBank.success);
         })
@@ -64,7 +61,7 @@ const FeedbackForm = () => {
   return (
     <form>
       <input
-        className="rounded-l px-4 py-2 bg-white bg-opacity-20  focus:bg-opacity-90 focus:text-black"
+        className="rounded-l px-4 py-2 bg-white bg-opacity-20 focus:bg-opacity-90 focus:text-black"
         type="text"
         placeholder="Website Feedback"
         value={message}
@@ -82,7 +79,7 @@ const FeedbackForm = () => {
         Send
       </button>
       <p className={`text-xs text-${status.color || "gray"}-400`}>
-        {status.message || String.fromCharCode(NBSP_CHAR_CODE)}
+        {status.message || String.fromCharCode(160) /* nbsp */}
       </p>
     </form>
   );
