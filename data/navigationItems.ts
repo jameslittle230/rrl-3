@@ -31,6 +31,6 @@ export const navItems: NavItem[] = [
   },
   { href: "/policies", title: "Office Policies" },
   { href: "/insurance", title: "Insurance" },
-  // { href: "/payments", title: "Payments" },
+  { href: "/billing", title: "Billing" },
   { href: "/referrals", title: "Referrals" },
 ];

@@ -67,12 +67,18 @@ export default function Page() {
           since="1999"
           imageUrl="/images/melissa.jpg"
         />
-
         <StaffProfile
-          name="Idalia Peña"
-          since="2022"
-          imageUrl="/images/idalia.jpg"
+          name="India May"
+          since="2024"
+          imageUrl="/images/india.jpg"
         />
+        <StaffProfile
+          name="Da Hae Choi"
+          since="2024"
+          imageUrl="/images/da-hae.jpg"
+        />
+
+
       </StaffGrid>
     </>
   );

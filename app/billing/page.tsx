@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import Content from "./payments.mdx";
+import Content from "./billing.mdx";
 
 export const metadata: Metadata = {
-  title: "Payments",
+  title: "Billing",
 };
 
 export default function Page() {
