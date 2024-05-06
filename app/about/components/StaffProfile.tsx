@@ -11,7 +11,6 @@ export const StaffProfile = (props: {
         alt={`Picture of ${props.name}`}
       />
       <p className="font-bold leading-tight">{props.name}</p>
-      <p className="text-sm text-gray-700">Since {props.since}</p>
     </div>
   </div>
 );

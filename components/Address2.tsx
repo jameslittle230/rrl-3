@@ -5,7 +5,7 @@ const Address = (props: { covering?: boolean }) => {
   const data = {
     default: {
       addressLines: [
-        "Drs. Roth, Rotter, and Laster",
+        "Drs. Roth, Rotter, Laster and Ivanova",
         "637 Washington Street",
         "Suite 202",
         "Brookline, MA 02446",
