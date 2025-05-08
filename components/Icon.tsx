@@ -1,37 +1,27 @@
-import MappinCircleFill from "./icons/mappin.circle.fill";
-import PhoneFill from "./icons/phone.fill";
-import ArrowUpRightSquare from "./icons/arrow.up.right.square";
-import DocText from "./icons/doc.text";
-import LogoGoogle from "./icons/logo.google";
-import LogoApple from "./icons/logo.apple";
-import Video from "./icons/video";
-import EllipsisRectangle from "./icons/ellipsis.rectangle";
-import XmarkCircleFill from "./icons/xmark.circle.fill";
-import FaxMachine from "./icons/faxmachine";
+"use client";
 
-const Icon = (props) => {
-  const icons = {
-    "mappin.circle.fill": <MappinCircleFill />,
-    "phone.fill": <PhoneFill />,
-    "arrow.up.right.square": <ArrowUpRightSquare />,
-    "doc.text": <DocText />,
-    "logo.google": <LogoGoogle />,
-    "logo.apple": <LogoApple />,
-    video: <Video />,
-    "ellipsis.rectangle": <EllipsisRectangle />,
-    "xmark.circle.fill": <XmarkCircleFill />,
-    faxmachine: <FaxMachine />,
-  };
+import React from "react";
+import { cx } from "class-variance-authority";
 
-  if (!icons[props.icon]) {
-    throw new Error(`Cannot find icon \`${props.icon}\`!`);
-  }
+const IconStyleContext = React.createContext(["fill-inherit", "size-4"]);
 
+export const IconConfig = ({ uses, children }) => {
+  const iconStyleContextValue = React.useContext(IconStyleContext);
   return (
-    <span className={`inline relative -top-0.5 ${props.className}`}>
-      {icons[props.icon]}
-    </span>
+    <IconStyleContext.Provider value={[...iconStyleContextValue, uses]}>
+      {children}
+    </IconStyleContext.Provider>
   );
 };
 
-export default Icon;
+export const Icon = ({ icon, className = "", ...props }) => {
+  const iconStyleContextValue = React.useContext(IconStyleContext);
+  return (
+    <span
+      className={cx(iconStyleContextValue, className)}
+      {...props}
+    >
+      {icon}
+    </span>
+  );
+};

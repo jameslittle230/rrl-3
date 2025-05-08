@@ -1,13 +1,13 @@
 import { DesktopNavigationItem } from "./DesktopNavigationItem";
-import { navItems } from "../../data/navigationItems";
+import { NavItem, navItems } from "../../data/navigationItems";
 
 export const Navigation = () => {
   return (
     <nav className="w-fit hidden md:block">
       <ul>
         {navItems
-          .filter((item) => !item.mobileOnly)
-          .map((item) => (
+          .filter((item: NavItem) => !item.mobileOnly)
+          .map((item: NavItem) => (
             <DesktopNavigationItem key={item.href} item={item} />
           ))}
       </ul>

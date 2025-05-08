@@ -1,52 +1,71 @@
 "use client";
 
-import { navItems } from "@/data/navigationItems";
+import {
+  Button,
+  Dialog,
+  DialogTrigger,
+  Modal,
+  ModalOverlay,
+} from "react-aria-components";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { navItems } from "../../data/navigationItems";
 import { MobileNavigationItem } from "./MobileNavigationItem";
-import { useEffect, useState } from "react";
-import Icon from "../Icon";
-import { usePathname } from "next/navigation";
 
 export const MobileNavigation = () => {
-  const [visible, setVisible] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const pathname = usePathname();
-  useEffect(() => {
-    setVisible(false);
-    setLoading(false);
-  }, [pathname]);
-
-  if (!visible)
-    return (
-      <button
-        onClick={() => setVisible(true)}
-        className="fixed top-3 right-3 bg-gray-100 rounded-full px-3 py-2 text-4xl text-gray-700 md:hidden outline outline-1 outline-gray-200"
-      >
-        <Icon icon="ellipsis.rectangle" />
-      </button>
-    );
   return (
-    <div className="md:hidden fixed bottom-0 top-0 left-0 right-0 bg-gray-400 bg-opacity-80 overscroll-contain">
-      <button
-        onClick={() => setVisible(false)}
-        className="fixed top-3 right-3 text-5xl text-white md:hidden"
-      >
-        <Icon icon="xmark.circle.fill" />
-      </button>
-      {!loading && (
-        <ul className="bg-gray-600 bottom-0 px-4 py-6 left-3 right-3 fixed rounded-t-3xl max-h-[70vh] overflow-y-auto">
+    <div className="md:hidden">
+      <DialogTrigger>
+        <Button className="fixed top-3 right-3 bg-blue-200 rounded-full p-2 border-blue-300 border-2 shadow-lg">
+          <Bars3Icon className="size-6"></Bars3Icon>
+        </Button>
+        <ModalOverlay
+          className={`fixed inset-0 z-10 overflow-y-auto bg-black/25 flex min-h-full items-start justify-center p-4 text-center backdrop-blur`}
+        >
+          <Modal
+            isDismissable
+            className={`w-full max-w-md overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl `}
+          >
+            <Dialog role="alertdialog" className="outline-hidden relative">
+              {({ close }) => (
+                <>
+                  <Button
+                    onPress={close}
+                    className="fixed top-6 right-6 bg-blue-200 rounded-full p-1 border-blue-300 border-2 shadow-lg"
+                  >
+                    <XMarkIcon className="size-4" />
+                  </Button>
+                  <ul>
+                    {navItems.map((item) => {
+                      return (
+                        <MobileNavigationItem
+                          key={item.href}
+                          item={item}
+                          onClick={close}
+                        >
+                        </MobileNavigationItem>
+                      );
+                    })}
+                  </ul>
+                </>
+              )}
+            </Dialog>
+          </Modal>
+        </ModalOverlay>
+      </DialogTrigger>
+      <noscript>
+        <ul id="nav" className="p-8 bg-gray-800 text-white">
           {navItems.map((item) => {
             return (
               <MobileNavigationItem
                 key={item.href}
                 item={item}
-                onClick={() => {
-                  setLoading(true);
-                }}
-              ></MobileNavigationItem>
+                onClick={() => { }}
+              >
+              </MobileNavigationItem>
             );
           })}
         </ul>
-      )}
+      </noscript>
     </div>
   );
 };

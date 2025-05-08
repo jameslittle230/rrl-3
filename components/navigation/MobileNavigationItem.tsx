@@ -2,9 +2,34 @@
 
 import classnames from "classnames";
 import { NavItem } from "@/data/navigationItems";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Icon from "@/components/Icon";
+import { Link } from "../Link";
+import { cva } from "class-variance-authority";
+import { isExternal } from "node:util/types";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+
+const linkStyles = cva([
+  "block",
+  "rounded-sm",
+  "px-4",
+  "py-1",
+  "-ml-3",
+  "hover:bg-gray-100",
+  "hover:text-blue-900",
+  "hover:no-underline",
+  "pointer-coarse:no-underline",
+  "transition-colors",
+  "ease-[cubic-bezier(0.215,0.61,0.355,1)]",
+  "pointer-coarse:no-underline",
+  "touch:underline",
+], {
+  variants: {
+    active: {
+      false: null,
+      true: ["bg-blue-100", "hover:bg-blue-200", "font-bold", "tracking-tight"],
+    },
+  },
+});
 
 export const MobileNavigationItem = ({
   item,
@@ -18,28 +43,20 @@ export const MobileNavigationItem = ({
   const pathname = usePathname();
   const isCurrentPage = pathname === href;
 
-  const baseClassNames =
-    "block uppercase text-md mb-2 px-3 py-1 rounded focus:ring-2 focus:ring-blue-600";
-  const nonCurrentPageClassNames = "hover:bg-gray-700 text-white";
-  const currentPageClassNames = "bg-gray-100 font-bold";
-
   return (
     <li>
       <Link
         href={href}
-        className={classnames(baseClassNames, {
-          [currentPageClassNames]: isCurrentPage,
-          [nonCurrentPageClassNames]: !isCurrentPage,
-        })}
         onClick={onClick}
+        className={linkStyles({ active: isCurrentPage })}
       >
         {title}{" "}
         {isExternalLink && (
-          <Icon icon="arrow.up.right.square" className="inline-block" />
+          <ArrowTopRightOnSquareIcon className="inline size-4 align-baseline translate-y-0.5" />
         )}
       </Link>
       {children && (
-        <ul className="ml-4 pl-2 border-l-4 border-gray-200">
+        <ul className="pl-4 ml-2 border-l-4 border-gray-200">
           {children?.map((child) => (
             <MobileNavigationItem
               onClick={onClick}

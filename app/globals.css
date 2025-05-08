@@ -1,15 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-svg {
-  display: inline;
+* {
+  text-wrap: pretty;
 }
 
-.prose .resource {
-  margin-top: 1.25rem;
+.bg-address {
+  background: linear-gradient(to right, white, hsla(0, 0%, 0%, 0%)), url(/images/map.png) center/cover no-repeat;
 }
 
-.resource-grid .resource {
-  margin-top: 0;
-}
