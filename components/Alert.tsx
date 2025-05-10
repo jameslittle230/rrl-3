@@ -6,17 +6,9 @@ import {
   ExclamationTriangleIcon,
 } from "@heroicons/react/24/solid";
 import { LinkConfig } from "@/components/Link";
+import { buttonStyles } from "./Button";
 
-const alertStyles = cva([
-  "alert",
-  "flex",
-  "gap-3",
-  "text-sm",
-  "py-3",
-  "px-4",
-  "rounded-md",
-  "not-prose",
-], {
+const alertStyles = cva(["alert", "flex", "gap-x-3", "text-sm", "py-3", "px-4", "rounded-md", "not-prose"], {
   variants: {
     type: {
       warning: ["bg-yellow-50", "text-yellow-700", "fill-orange-700/60"],
@@ -28,31 +20,20 @@ const alertStyles = cva([
 
 const alertIconStyles = cva(["size-5", "fill-inherit"]);
 
-const alertActionStyles = cva([
+const alertActionStyles = cva([buttonStyles(),
+[
   "inline-block",
-  "rounded-sm",
-  "py-1",
   "px-2",
-  "-my-1",
   "-mx-2",
   "font-semibold",
-  "transition-colors",
-  "ease-[cubic-bezier(0.215,0.61,0.355,1)]",
-  "pointer-coarse:no-underline",
-  "touch:underline",
-  "hover:no-underline",
-], {
+  "text-inherit",
+  "bg-transparent"
+]], {
   variants: {
     type: {
-      warning: [
-        "pointer-coarse:bg-orange-200 hover:bg-orange-200 active:bg-orange-300",
-      ],
-      success: [
-        "pointer-coarse:bg-green-200 hover:bg-green-200 active:bg-green-300",
-      ],
-      error: [
-        "pointer-coarse:bg-red-200 hover:bg-red-200 active:bg-red-300",
-      ],
+      warning: ["pointer-coarse:bg-orange-200 hover:bg-orange-200 active:bg-orange-300"],
+      success: ["pointer-coarse:bg-green-200 hover:bg-green-200 active:bg-green-300"],
+      error: ["pointer-coarse:bg-red-200 hover:bg-red-200 active:bg-red-300"],
     },
   },
 });
@@ -65,11 +46,7 @@ export interface AlertProps extends React.HTMLAttributes<HTMLDivElement> {
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ className, children, actions, type = "warning", ...props }, ref) => {
     return (
-      <div
-        className={alertStyles({ className, type })}
-        ref={ref}
-        {...props}
-      >
+      <div className={alertStyles({ className, type })} ref={ref} {...props}>
         <span>
           {type === "warning" && (
             <ExclamationTriangleIcon className={alertIconStyles()} />
@@ -81,16 +58,12 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
             <ExclamationCircleIcon className={alertIconStyles()} />
           )}
         </span>
-        <div className="flex gap-4 flex-col md:flex-row grow items-start">
-          <LinkConfig
-            uses={cx(["font-bold", "underline", "hover:no-underline"])}
-          >
+        <div className="flex gap-x-4 gap-y-2 flex-col md:flex-row grow items-start">
+          <LinkConfig uses={cx(["font-bold", "underline", "hover:no-underline"])}>
             <div className="flex flex-col gap-2 grow">{children}</div>
           </LinkConfig>
           <div className="shrink-0 flex flex-wrap gap-3 pointer-coarse:gap-6">
-            <LinkConfig uses={alertActionStyles({ type })}>
-              {actions}
-            </LinkConfig>
+            <LinkConfig uses={alertActionStyles({ type })}>{actions}</LinkConfig>
           </div>
         </div>
       </div>

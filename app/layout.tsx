@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Navigation } from "@/components/navigation/DesktopNavigation";
 
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { DM_Serif_Display, DM_Serif_Text, Inter } from "next/font/google";
 import "./globals.css";
 import GoatCounter from "@/components/GoatCounter";
 import { Metadata, Viewport } from "next";
@@ -14,7 +14,7 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const dmSerifDisplay = DM_Serif_Display({
+const dmSerifDisplay = DM_Serif_Text({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-dm-serif-display",
@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Header className="mb-4 md:mb-8" />
           <div className="block md:grid grid-cols-[max-content_1fr] gap-8">
             <Navigation />
-            <main className="w-full">{children}</main>
+            <main className="w-full" id="content">{children}</main>
           </div>
         </div>
         <Footer />

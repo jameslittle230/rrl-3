@@ -15,7 +15,6 @@ export const navItems: NavItem[] = [
   },
 
   { href: "/appointments", title: "Appointments" },
-  // { href: "/how-to-reach", title: "How to Reach your Pediatrician" },
   { href: "/emergencies-after-hours", title: "Emergencies & After Hours" },
   { href: "/new-patient", title: "New Patient Information" },
   {

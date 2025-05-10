@@ -5,22 +5,20 @@ import { usePathname } from "next/navigation";
 import { cva } from "class-variance-authority";
 import { Link } from "../Link";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
+import { buttonStyles } from "../Button";
+import { twMerge } from "tailwind-merge";
 
-const linkStyles = cva([
-  "block",
-  "rounded-sm",
-  "px-4",
-  "py-1",
-  "-ml-3",
-  "hover:bg-gray-100",
-  "hover:text-blue-900",
-  "hover:no-underline",
-  "pointer-coarse:no-underline",
-  "transition-colors",
-  "ease-[cubic-bezier(0.215,0.61,0.355,1)]",
-  "pointer-coarse:no-underline",
-  "touch:underline",
-], {
+const linkStyles = cva(twMerge([
+  buttonStyles(),
+  [
+    "block",
+    "my-0",
+    "font-normal",
+    "bg-transparent",
+    "hover:bg-gray-100",
+    "active:bg-blue-200",
+  ]
+]), {
   variants: {
     active: {
       false: null,
@@ -38,12 +36,7 @@ export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
 
   return (
     <li>
-      <Link
-        href={href}
-        className={linkStyles({ active: isCurrentPage })}
-      >
-        {title} {isExternalLink ? "&rarr;" : null}
-      </Link>
+      <Link href={href} className={linkStyles({ active: isCurrentPage })}>{title}{isExternalLink ? "&rarr;" : null}</Link>
       <MotionConfig transition={{ ease: "easeOut", duration: 0.3 }}>
         <AnimatePresence>
           {children && (isCurrentPage || childIsCurrentPage) && (
@@ -59,7 +52,7 @@ export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
-                className="ml-1 pl-5 border-l-2 border-gray-200"
+                className="ml-1 pl-5 border-l-2 border-gray-200 flex flex-col gap-1"
               >
                 {children?.map((child) => (
                   <DesktopNavigationItem key={child.href} item={child} />

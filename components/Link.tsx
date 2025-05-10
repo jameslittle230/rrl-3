@@ -2,7 +2,7 @@
 
 import { default as NextLink } from "next/link";
 import React from "react";
-import { cx } from "class-variance-authority";
+import { cva, cx } from "class-variance-authority";
 import { twMerge } from "tailwind-merge";
 
 const LinkStyleContext = React.createContext([
@@ -22,10 +22,6 @@ export const LinkConfig = ({ uses, children }) => {
 export const Link = ({ className = "", href, ...props }) => {
   const linkStyleContextValue = React.useContext(LinkStyleContext);
   return (
-    <NextLink
-      href={href}
-      className={twMerge(cx(linkStyleContextValue, className))}
-      {...props}
-    />
+    <NextLink href={href} className={twMerge(cx(linkStyleContextValue, className))} {...props} />
   );
 };

@@ -7,21 +7,18 @@ import { Link } from "../Link";
 import { cva } from "class-variance-authority";
 import { isExternal } from "node:util/types";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import { buttonStyles } from "../Button";
 
 const linkStyles = cva([
-  "block",
-  "rounded-sm",
-  "px-4",
-  "py-1",
-  "-ml-3",
-  "hover:bg-gray-100",
-  "hover:text-blue-900",
-  "hover:no-underline",
-  "pointer-coarse:no-underline",
-  "transition-colors",
-  "ease-[cubic-bezier(0.215,0.61,0.355,1)]",
-  "pointer-coarse:no-underline",
-  "touch:underline",
+  buttonStyles(),
+  [
+    "block",
+    "my-0",
+    "font-normal",
+    "bg-transparent",
+    "hover:bg-gray-100",
+    "active:bg-blue-200",
+  ]
 ], {
   variants: {
     active: {
@@ -56,7 +53,7 @@ export const MobileNavigationItem = ({
         )}
       </Link>
       {children && (
-        <ul className="pl-4 ml-2 border-l-4 border-gray-200">
+        <ul className="ml-6 my-2 pl-2 border-l-2 border-gray-200 flex flex-col">
           {children?.map((child) => (
             <MobileNavigationItem
               onClick={onClick}

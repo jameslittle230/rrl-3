@@ -17,10 +17,7 @@ export const IconConfig = ({ uses, children }) => {
 export const Icon = ({ icon, className = "", ...props }) => {
   const iconStyleContextValue = React.useContext(IconStyleContext);
   return (
-    <span
-      className={cx(iconStyleContextValue, className)}
-      {...props}
-    >
+    <span className={cx(iconStyleContextValue, className)} {...props}>
       {icon}
     </span>
   );

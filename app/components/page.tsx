@@ -1,12 +1,18 @@
 "use client";
-import { Link } from "@/components/Link";
+import { Link, LinkConfig } from "@/components/Link";
 import Alert from "@/components/Alert";
 import Address from "../../components/Address";
 import Resource from "../../components/Resource";
+import { buttonStyles } from "@/components/Button";
 
 export default function Page() {
   return (
     <>
+      <Link href="#">This is a link</Link>
+      <LinkConfig uses={[buttonStyles()]}>
+        <Link href="#">This is a button</Link>
+      </LinkConfig>
+      <Link href="#" className={buttonStyles()}>This is a button</Link>
       <Alert
         type="success"
         actions={<Link href="#">Contact us today!</Link>}

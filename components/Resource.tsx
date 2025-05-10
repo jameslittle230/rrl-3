@@ -34,62 +34,17 @@ const Resource = React.forwardRef<HTMLAnchorElement, ResourceProps>(
     ref,
   ) => {
     return (
-      <Link
-        className={resourceStyles({ className })}
-        ref={ref}
-        href={url}
-        {...props}
-      >
-        {icon === "document" &&
-          <DocumentTextIcon className="size-8" />}
-        {icon === "video" &&
-          <VideoCameraIcon className="size-8" />}
+      <Link className={resourceStyles({ className })} ref={ref} href={url} {...props}>
+        {icon === "document" && <DocumentTextIcon className="size-8" />}
+        {icon === "video" && <VideoCameraIcon className="size-8" />}
         <div className="flex flex-col">
-          <span className="font-semibold">
-            {name}
-          </span>
-          {subtitle && (
-            <span className="text-sm font-normal">
-              {subtitle}
-            </span>
-          )}
-          {children &&
-            (
-              <div>
-                {children}
-              </div>
-            )}
+          <span className="font-semibold">{name}</span>
+          {subtitle && (<span className="text-sm font-normal">{subtitle}</span>)}
+          {children && (<div>{children}</div>)}
         </div>
       </Link>
     );
   },
-);
-
-const Resource2 = (props: {
-  url: string;
-  name: string;
-  subtitle: string;
-  children?: React.ReactNode;
-}) => (
-  <a
-    href={props.url}
-    target="_blank"
-    className={`resource p-4 rounded-xl
-    border-4 border-gray-300 border-solid
-    flex space-x-4 items-center hover:bg-gray-100`}
-  >
-    <div className="flex-shrink text-4xl">
-    </div>
-    <div className="">
-      <p className="text-gray-800 font-semibold m-0 leading-tight">
-        {props.name}
-      </p>
-      {props.subtitle
-        ? <p className="text-sm text-gray-600 m-0">{props.subtitle}</p>
-        : null}
-      {props.children ? <p className="mt-4">{props.children}</p> : null}
-    </div>
-  </a>
 );
 
 Resource.displayName = "Resource";

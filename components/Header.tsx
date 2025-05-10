@@ -3,6 +3,8 @@ import { cva, cx } from "class-variance-authority";
 import * as React from "react";
 import { MapPinIcon, PhoneIcon, PrinterIcon } from "@heroicons/react/24/solid";
 import { Icon, IconConfig } from "./Icon";
+import { buttonStyles } from "./Button";
+import { skip } from "node:test";
 
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> { }
 
@@ -13,6 +15,18 @@ const headerStyles = cva([
   "border-gray-300",
 ]);
 
+const skipToContentStyles = cva([
+  "sr-only",
+  "focus:not-sr-only",
+  "focus:absolute",
+  "focus:top-0",
+  "focus:left-0",
+  "focus:bg-blue-100",
+  "focus:px-8",
+  "focus:py-3",
+  "rounded-br-lg"
+])
+
 const headerIconStyles = cva(["inline-block", "shrink-0", "translate-y-0.5"]);
 
 const headerLinkStyles = cva(["flex", "gap-1", "items-baseline"]);
@@ -20,19 +34,13 @@ const headerLinkStyles = cva(["flex", "gap-1", "items-baseline"]);
 const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
   ({ className, ...props }, ref) => {
     return (
-      <div
-        className={headerStyles({ className })}
-        ref={ref}
-        {...props}
-      >
-        <h1 className="text-blue-600 hover:text-blue-800 font-serif text-4xl md:text-5xl mb-2 mr-12">
-          <Link
-            className="pointer-coarse:no-underline touch:underline"
-            href="/"
-          >
+      <div className={headerStyles({ className })} ref={ref} {...props}>
+        <h1 className="text-blue-600 hover:text-blue-800 font-serif text-4xl md:text-5xl mb-2 mr-12 font-normal">
+          <Link className="pointer-coarse:no-underline touch:underline" href="/">
             Drs. Roth, Rotter, Laster&nbsp;&amp;&nbsp;Ivanova
           </Link>
         </h1>
+        <Link href="#content" className={skipToContentStyles()}>Skip to content</Link>
         <div className="flex flex-col gap-1 text-gray-600 fill-gray-500">
           <LinkConfig uses={[headerLinkStyles()]}>
             <IconConfig uses={[headerIconStyles()]}>
@@ -54,22 +62,7 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
                   </Link>
                 </div>
                 <Link
-                  className={cx([
-                    "hidden",
-                    "md:inline-block",
-                  ], [
-                    "bg-blue-200",
-                    "hover:bg-blue-300",
-                    "active:bg-blue-400",
-                    "text-black",
-                    "px-4",
-                    "py-1",
-                    "rounded-sm",
-                    "-my-1",
-                    "font-bold",
-                    "hover:no-underline",
-                    "pointer-coarse:no-underline",
-                  ])}
+                  className={cx(["hidden", "md:inline-block"], buttonStyles())}
                   href="#"
                 >
                   Patient Portal Login &rarr;
