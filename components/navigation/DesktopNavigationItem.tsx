@@ -1,10 +1,31 @@
 "use client";
 
-import classnames from "classnames";
 import { NavItem } from "@/data/navigationItems";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Icon from "../Icon";
+import { cva } from "class-variance-authority";
+import { Link } from "../Link";
+import { AnimatePresence, motion, MotionConfig } from "motion/react";
+import { buttonStyles } from "../Button";
+import { twMerge } from "tailwind-merge";
+
+const linkStyles = cva(twMerge([
+  buttonStyles(),
+  [
+    "block",
+    "my-0",
+    "font-normal",
+    "bg-transparent",
+    "hover:bg-gray-100",
+    "active:bg-blue-200",
+  ]
+]), {
+  variants: {
+    active: {
+      false: null,
+      true: ["bg-blue-100", "hover:bg-blue-200", "font-bold", "tracking-tight"],
+    },
+  },
+});
 
 export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
   const { href, title, children } = item;
@@ -13,33 +34,35 @@ export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
   const isCurrentPage = pathname === href;
   const childIsCurrentPage = children?.some((child) => child.href === pathname);
 
-  const baseClassNames =
-    "block uppercase text-md mb-2 px-3 py-1 rounded hover:bg-gray-100 active:bg-gray-300 focus:ring-2 focus:ring-blue-600";
-  const currentPageClassNames = "bg-blue-100 hover:bg-blue-200 font-bold";
-
   return (
     <li>
-      <Link
-        href={href}
-        className={classnames(baseClassNames, {
-          [currentPageClassNames]: isCurrentPage,
-        })}
-      >
-        {title}
-        {isExternalLink ? (
-          <>
-            {" "}
-            <Icon icon="arrow.up.right.square" />
-          </>
-        ) : null}
-      </Link>
-      {children && (isCurrentPage || childIsCurrentPage) && (
-        <ul className="ml-4 pl-2 border-l-4 border-gray-200">
-          {children?.map((child) => (
-            <DesktopNavigationItem key={child.href} item={child} />
-          ))}
-        </ul>
-      )}
+      <Link href={href} className={linkStyles({ active: isCurrentPage })}>{title}{isExternalLink ? "&rarr;" : null}</Link>
+      <MotionConfig transition={{ ease: "easeOut", duration: 0.3 }}>
+        <AnimatePresence>
+          {children && (isCurrentPage || childIsCurrentPage) && (
+            <motion.div
+              layout
+              className="overflow-clip"
+              initial={{ height: 0 }}
+              animate={{ height: "auto" }}
+              exit={{ height: 0 }}
+            >
+              <div className="h-3" />
+              <motion.ul
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: -20, opacity: 0 }}
+                className="ml-1 pl-5 border-l-2 border-gray-200 flex flex-col gap-1"
+              >
+                {children?.map((child) => (
+                  <DesktopNavigationItem key={child.href} item={child} />
+                ))}
+              </motion.ul>
+              <div className="h-3" />
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </MotionConfig>
     </li>
   );
 };
