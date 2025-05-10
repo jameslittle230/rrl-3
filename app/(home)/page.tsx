@@ -26,7 +26,7 @@ export default function Page() {
       <Alert
         type="success"
         className="mb-6"
-        actions={<Link href="#">Contact us today!</Link>}
+        actions={<Link href="/new-patient">Contact us today!</Link>}
       >
         <p>We are currently accepting new patients!</p>
       </Alert>

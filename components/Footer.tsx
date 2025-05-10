@@ -4,7 +4,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="w-full bg-gray-800 mt-6 -mb-3">
-      <div className="container max-w-screen-lg mx-auto p-8 text-gray-300 text-sm flex flex-col-reverse gap-x-4 sm:flex-row justify-between">
+      <div className="container max-w-screen-lg mx-auto py-8 px-4 text-gray-300 text-sm flex flex-col-reverse gap-x-4 sm:flex-row justify-between">
         <div className="text">
           <p>Website Design ©{year}{" "}<Link href="https://jameslittle.me">James Little</Link></p>
           <p>Content ©{year}{" "}Sally Roth, Sari Rotter, Susan Laster, Magdalena Ivanova</p>

@@ -44,7 +44,7 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
         <div className="flex flex-col gap-1 text-gray-600 fill-gray-500">
           <LinkConfig uses={[headerLinkStyles()]}>
             <IconConfig uses={[headerIconStyles()]}>
-              <Link href="#">
+              <Link href="https://maps.app.goo.gl/UBDnf2qYcMg2e23m8">
                 <Icon icon={<MapPinIcon />} aria-label="Address" />
                 <span>
                   637 Washington Street, Suite 202 • Brookline MA 02446
@@ -52,18 +52,18 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
               </Link>
               <div className="w-full flex">
                 <div className="flex gap-4 grow">
-                  <Link href="#">
+                  <Link href="tel:6172322811">
                     <Icon icon={<PhoneIcon />} aria-label="Phone number" />
                     <span>(617) 232-2811</span>
                   </Link>
-                  <Link href="#">
+                  <span className={headerLinkStyles()}>
                     <Icon icon={<PrinterIcon />} aria-label="Fax" />
                     <span>(617) 383-8178</span>
-                  </Link>
+                  </span>
                 </div>
                 <Link
                   className={cx(["hidden", "md:inline-block"], buttonStyles())}
-                  href="#"
+                  href="https://mychart.chppoc.org/rrl"
                 >
                   Patient Portal Login &rarr;
                 </Link>
