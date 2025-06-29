@@ -37,7 +37,7 @@ export const DesktopNavigationItem = ({ item }: { item: NavItem }) => {
   return (
     <li>
       <Link href={href} className={linkStyles({ active: isCurrentPage })}>{title}{isExternalLink ? "&rarr;" : null}</Link>
-      <MotionConfig transition={{ ease: "easeOut", duration: 0.3 }}>
+      <MotionConfig transition={{ ease: [0, 0.71, 0.2, 1.01], duration: 0.3 }}>
         <AnimatePresence>
           {children && (isCurrentPage || childIsCurrentPage) && (
             <motion.div
