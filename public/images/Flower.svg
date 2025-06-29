@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="526px" height="578px" viewBox="0 0 526 578" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Frame" transform="translate(-162, -136)">
+            <g id="Group" transform="translate(162.5217, 136)">
+                <path d="M260.548228,2.84217094e-14 C332.611029,99.3595769 359.63497,170.687783 341.620051,213.984617 C314.597673,278.92987 211.365902,281.425038 183.43776,213.984617 C164.818999,169.024337 190.522488,97.6961313 260.548228,2.84217094e-14 Z" id="Triangle" fill="#0091FF" transform="translate(262.2981, 131.8168) rotate(180) translate(-262.2981, -131.8168)"></path>
+                <path d="M285.084304,277.836135 C334.879245,165.587012 382.980248,106.459069 429.387312,100.452307 C498.997908,91.4421639 552.769109,179.826721 508.478457,237.795854 C478.951357,276.441942 404.486639,289.788703 285.084304,277.836135 Z" id="Triangle" fill="#5FBAFF"></path>
+                <path d="M283.334475,303.202483 C405.192217,290.312936 480.317161,302.513199 508.709306,339.803272 C551.297525,395.738381 501.836954,486.618106 429.618161,477.146819 C381.472299,470.832627 332.71107,412.851181 283.334475,303.202483 Z" id="Triangle" fill="#0091FF"></path>
+                <path d="M260.548228,314.366347 C332.611029,413.725924 359.63497,485.05413 341.620051,528.350965 C314.597673,593.296217 211.365902,595.791385 183.43776,528.350965 C164.818999,483.390684 190.522488,412.062479 260.548228,314.366347 Z" id="Triangle" fill="#5FBAFF" transform="translate(262.2981, 446.1832) rotate(360) translate(-262.2981, -446.1832)"></path>
+                <path d="M239.511809,300.163865 C189.716869,412.412988 141.615866,471.540931 95.2088017,477.547693 C25.5982051,486.557836 -28.172995,398.173279 16.1176562,340.204146 C45.6447569,301.558058 120.109475,288.211297 239.511809,300.163865 Z" id="Triangle" fill="#0091FF"></path>
+                <path d="M241.261638,274.797517 C119.403896,287.687064 44.2789525,275.486801 15.8868072,238.196728 C-26.7014109,182.261619 22.7591594,91.3818936 94.9779527,100.853181 C143.123815,107.167373 191.885043,165.148819 241.261638,274.797517 Z" id="Triangle" fill="#5FBAFF"></path>
+                <line x1="261.97834" y1="57.5" x2="261.97834" y2="198.5" id="Line" stroke="#FFFFFF" stroke-width="16" opacity="0.395589718" stroke-linecap="round"></line>
+                <line x1="399.243367" y1="136.75" x2="399.243367" y2="277.75" id="Line" stroke="#FFFFFF" stroke-width="16" opacity="0.395589718" stroke-linecap="round" transform="translate(399.2434, 207.25) rotate(60) translate(-399.2434, -207.25)"></line>
+                <line x1="399.243367" y1="295.25" x2="399.243367" y2="436.25" id="Line" stroke="#FFFFFF" stroke-width="16" opacity="0.395589718" stroke-linecap="round" transform="translate(399.2434, 365.75) rotate(120) translate(-399.2434, -365.75)"></line>
+                <line x1="261.97834" y1="374.5" x2="261.97834" y2="515.5" id="Line" stroke="#FFFFFF" stroke-width="16" opacity="0.395589718" stroke-linecap="round" transform="translate(261.9783, 445) rotate(180) translate(-261.9783, -445)"></line>
+                <line x1="124.713314" y1="295.25" x2="124.713314" y2="436.25" id="Line" stroke="#FFFFFF" stroke-width="16" opacity="0.395589718" stroke-linecap="round" transform="translate(124.7133, 365.75) rotate(240) translate(-124.7133, -365.75)"></line>
+                <line x1="124.713314" y1="136.75" x2="124.713314" y2="277.75" id="Line" stroke="#FFFFFF" stroke-width="16" opacity="0.395589718" stroke-linecap="round" transform="translate(124.7133, 207.25) rotate(300) translate(-124.7133, -207.25)"></line>
+                <circle id="Oval" fill="#FEFEA3" cx="262.47834" cy="289" r="90"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

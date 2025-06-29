@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { Link } from "./Link";
 const data = {
   default: {
-    addressLines: ["Drs. Roth, Rotter, Laster and Ivanova", "637 Washington Street", "Suite 202", "Brookline, MA 02446"],
+    addressLines: ["Washington Square Pediatrics", "637 Washington Street", "Suite 202", "Brookline, MA 02446"],
     googleUrl:
       "https://www.google.com/maps/dir/?api=1&destination=637+Washington+St+%23202,+Brookline,+MA+02446",
     appleUrl:

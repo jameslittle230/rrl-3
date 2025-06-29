@@ -23,9 +23,9 @@ const dmSerifDisplay = DM_Serif_Text({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Roth, Rotter, Laster, Ivanova",
+    template: "%s | Washington Square Pediatrics",
     default:
-      "Dr. Sally Roth, Dr. Sari Rotter, Dr. Susan Laster, and Dr. Magdalena Ivanova",
+      "Drs. Sally Roth and Susan Laster",
   },
 
   description: "Pediatricians in Brookline, MA",

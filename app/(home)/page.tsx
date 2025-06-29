@@ -13,10 +13,7 @@ const HomeBox = (props) => (
 );
 
 export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Dr. Sally Roth, Dr. Sari Rotter, Dr. Susan Laster, and Dr. Magdalena Ivanova",
-  },
+  title: { absolute: "Dr. Sally Roth, and Dr. Susan Laster", },
   description: "Pediatricians in Brookline, MA",
 };
 
