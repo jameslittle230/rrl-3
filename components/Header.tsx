@@ -150,7 +150,7 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
           </Link>
         </h1>
         <Link href="#content" className={skipToContentStyles()}>Skip to content</Link>
-        <div className="flex flex-col gap-1 text-gray-600 fill-gray-500">
+        <div className="flex flex-col items-start gap-1 text-gray-600 fill-gray-500">
           <LinkConfig uses={[headerLinkStyles()]}>
             <IconConfig uses={[headerIconStyles()]}>
               <Link href="https://maps.app.goo.gl/UBDnf2qYcMg2e23m8">
