@@ -3,10 +3,10 @@ export const StaffProfile = (props: {
   since: string;
   imageUrl: string;
 }) => (
-  <div className="no-prose border-gray-200 border-2 border-solid rounded-xl p-2 overflow-clip">
+  <div className="no-prose border-gray-200 border-1 border-solid rounded-lg p-3 overflow-clip">
     <div>
       <img
-        className="mb-2 -mt-2 -mx-2 max-w-[calc(100%+1em)]" // 1em = mx-2 * 2
+        className="mb-2 -mt-1 -mx-1 rounded-md max-w-[calc(100%+0.5em)]" // 1em = mx-2 * 2
         src={props.imageUrl}
         alt={`Picture of ${props.name}`}
       />

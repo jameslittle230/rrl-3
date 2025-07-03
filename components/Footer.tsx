@@ -4,17 +4,16 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className="w-full bg-gray-800 mt-6 -mb-3">
-      <div className="container max-w-screen-lg mx-auto py-8 px-4 text-gray-300 text-sm flex flex-col-reverse gap-x-4 sm:flex-row justify-between">
+      <div className="container max-w-screen-lg mx-auto py-8 px-4 text-gray-300 text-sm flex flex-col-reverse sm:items-end gap-4 sm:flex-row justify-between">
         <div className="text">
-          <p>Website Design ©{year}{" "}<Link href="https://jameslittle.me">James Little</Link></p>
-          <p>Content ©{year}{" "}Sally Roth, Sari Rotter, Susan Laster, Magdalena Ivanova</p>
-          <p>Photos by Sari Rotter &amp; Bill Gardner</p>
+          <p>Website Design &copy; {year} <Link href="https://jameslittle.me">James Little</Link></p>
+          <p>Content &copy; {year} Washington Square Pediatrics</p>
         </div>
         <div>
           <img
-            className="inline mb-8 max-w-[350px] w-full sm:w-64 flex-grow-0 ring ring-gray-200"
+            className="inline max-w-[350px] w-full sm:w-64 flex-grow-0 ring ring-gray-200"
             src="/images/ppoc.jpg"
-            alt="Drs. Roth, Rotter, Laster and Ivanova are preferred Boston Children's Hospital Community of Care members."
+            alt="Drs. Roth, Laster, and Guenther are preferred Boston Children's Hospital Community of Care members."
           />
         </div>
       </div>
