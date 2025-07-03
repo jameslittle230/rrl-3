@@ -27,9 +27,7 @@ export default function Page() {
         Harvard College, Boston University School of Medicine, and trained at
         Massachusetts General Hospital where she also spent a year as Chief
         Resident of the MGH Pediatric Service. She is Board Certified and
-        continues to maintain her Board Certification. She is also on the Board
-        of Directors of the Pediatric Physicians Organization of Children’s
-        Hospital.
+        continues to maintain her Board Certification.
       </Profile>
 
       <Profile name="Cara S. Guenther, MD" imageUrl="/images/guenther.jpg">
