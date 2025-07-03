@@ -1,7 +1,7 @@
 import { Link, LinkConfig } from "@/components/Link";
 import { cva, cx } from "class-variance-authority";
 import * as React from "react";
-import { MapPinIcon, PhoneIcon, PrinterIcon } from "@heroicons/react/24/solid";
+import { MapPinIcon, PhoneIcon, PrinterIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { Icon, IconConfig } from "./Icon";
 import { buttonStyles } from "./Button";
 import { skip } from "node:test";
@@ -153,6 +153,10 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
         <div className="flex flex-col items-start gap-1 text-gray-600 fill-gray-500">
           <LinkConfig uses={[headerLinkStyles()]}>
             <IconConfig uses={[headerIconStyles()]}>
+              <span className={headerLinkStyles()}>
+                <Icon icon={<UserCircleIcon />} aria-label="Address" />
+                <span>Drs. Sally Roth, Susan Laster, and Cara Guenther</span>
+              </span>
               <Link href="https://maps.app.goo.gl/UBDnf2qYcMg2e23m8">
                 <Icon icon={<MapPinIcon />} aria-label="Address" />
                 <span>

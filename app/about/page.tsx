@@ -32,6 +32,10 @@ export default function Page() {
         Hospital.
       </Profile>
 
+      <Profile name="Cara S. Guenther, MD" imageUrl="/images/profile.png">
+        Dr. Guenther is a board-certified pediatrician who joined Drs. Roth and Laster in the summer of 2025. She is a graduate of Harvard University, Boston University School of Medicine, and the Boston Combined Residency Program at Boston Children’s Hospital and Boston Medical Center. After residency, Dr. Guenther completed two years of pediatric pulmonary fellowship at Boston Children’s Hospital before pursuing a career in general pediatrics.
+      </Profile>
+
       <div className="prose">
         <h2 className="mt-12 mb-4">Our Office Staff</h2>
       </div>
@@ -51,6 +55,11 @@ export default function Page() {
           name="India May"
           since="2024"
           imageUrl="/images/india.jpg"
+        />
+        <StaffProfile
+          name="Shanna Jones"
+          since="2025"
+          imageUrl="/images/profile.png"
         />
       </StaffGrid>
     </>

@@ -11,7 +11,7 @@ const data = {
   },
 
   covering: {
-    addressLines: ["Drs. Jonathan Benjamin, Roger Spingarn, and Elissa Rottenberg", "1400 Centre Street", "Newton MA 02459"],
+    addressLines: ["Drs. Roger Spingarn and Elissa Rottenberg", "1400 Centre Street", "Newton MA 02459"],
     googleUrl:
       "https://www.google.com/maps/dir/?api=1&destination=1400+Centre+St,+Newton,+MA+02459",
     appleUrl:
