@@ -5,6 +5,7 @@ import { StaffProfile } from "./components/StaffProfile";
 
 export const metadata: Metadata = {
   title: "About",
+  alternates: { canonical: "/about" },
 };
 
 export default function Page() {

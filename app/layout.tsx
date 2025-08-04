@@ -22,6 +22,8 @@ const dmSerifDisplay = DM_Serif_Text({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://washingtonsquarepediatrics.com'),
+  alternates: { canonical: "/" },
   title: {
     template: "%s | Washington Square Pediatrics",
     default: "Drs. Sally Roth, Susan Laster, and Cara Guenther",
