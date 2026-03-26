@@ -9,11 +9,18 @@ const Footer = () => {
           <p>Website Design &copy; {year} <Link href="https://jameslittle.me">James Little</Link></p>
           <p>Content &copy; {year} Washington Square Pediatrics</p>
         </div>
-        <div>
+        <div className="flex flex-col sm:items-center gap-4 sm:flex-row">
           <img
-            className="inline max-w-[350px] w-full sm:w-64 flex-grow-0 ring ring-gray-200"
+            className="inline max-w-[85px]"
+            src="/images/pmch.png"
+            alt="Drs. Roth, Laster, and Guenther are recognized by the NCQA as a patient-centered mediccal home."
+            title="Drs. Roth, Laster, and Guenther are recognized by the NCQA as a patient-centered mediccal home."
+          />
+          <img
+            className="inline max-w-[350px] w-full sm:w-64"
             src="/images/ppoc.jpg"
             alt="Drs. Roth, Laster, and Guenther are preferred Boston Children's Hospital Community of Care members."
+            title="Drs. Roth, Laster, and Guenther are preferred Boston Children's Hospital Community of Care members."
           />
         </div>
       </div>
