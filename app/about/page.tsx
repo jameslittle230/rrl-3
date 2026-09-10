@@ -41,6 +41,14 @@ export default function Page() {
         general pediatrics.
       </Profile>
 
+      <Profile name="Shannon M. Fernandez-Ledon, MD" imageUrl="/images/sfl.jpg">
+        Dr. Fernandez-Ledon is a graduate of the University of Pennsylvania,
+        Columbia University Vagelos College of Physicians and Surgeons, and the
+        Boston Combined Residency Program at Boston Children’s Hospital and
+        Boston Medical Center. She joined Drs. Roth, Laster, and Guenther at
+        Washington Square Pediatrics in September 2026.
+      </Profile>
+
       <div className="prose">
         <h2 className="mt-12 mb-4">Our Office Staff</h2>
       </div>
@@ -64,7 +72,7 @@ export default function Page() {
         <StaffProfile
           name="Kathleen Morin"
           since="2026"
-          imageUrl="/images/profile.png"
+          imageUrl="/images/kathleen.jpg"
         />
       </StaffGrid>
     </>
