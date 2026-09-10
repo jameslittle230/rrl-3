@@ -1,19 +1,18 @@
 import { Link, LinkConfig } from "@/components/Link";
 import { cva, cx } from "class-variance-authority";
 import * as React from "react";
-import { MapPinIcon, PhoneIcon, PrinterIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import {
+  MapPinIcon,
+  PhoneIcon,
+  PrinterIcon,
+  UserCircleIcon,
+} from "@heroicons/react/24/solid";
 import { Icon, IconConfig } from "./Icon";
 import { buttonStyles } from "./Button";
-import { skip } from "node:test";
 
-interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> { }
+interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const headerStyles = cva([
-  "pb-6",
-  "mb-6",
-  "border-b-1",
-  "border-gray-300",
-]);
+const headerStyles = cva(["pb-6", "mb-6", "border-b-1", "border-gray-300"]);
 
 const skipToContentStyles = cva([
   "sr-only",
@@ -24,8 +23,8 @@ const skipToContentStyles = cva([
   "focus:bg-blue-100",
   "focus:px-8",
   "focus:py-3",
-  "rounded-br-lg"
-])
+  "rounded-br-lg",
+]);
 
 const headerIconStyles = cva(["inline-block", "shrink-0", "translate-y-0.5"]);
 
@@ -145,11 +144,16 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
       <div className={headerStyles({ className })} ref={ref} {...props}>
         <h1 className="text-blue-600 hover:text-blue-800 font-serif text-4xl md:text-5xl mb-2 mr-12 font-normal inline-flex gap-2 md:gap-3">
           <Logo className="h-10 md:h-12 w-10 md:w-10" />
-          <Link className="pointer-coarse:no-underline touch:underline" href="/">
+          <Link
+            className="pointer-coarse:no-underline touch:underline"
+            href="/"
+          >
             Washington Square Pediatrics
           </Link>
         </h1>
-        <Link href="#content" className={skipToContentStyles()}>Skip to content</Link>
+        <Link href="#content" className={skipToContentStyles()}>
+          Skip to content
+        </Link>
         <div className="flex flex-col items-start gap-1 text-gray-600 fill-gray-500">
           <LinkConfig uses={[headerLinkStyles()]}>
             <IconConfig uses={[headerIconStyles()]}>
@@ -176,7 +180,7 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
                 </div>
                 <Link
                   className={cx(["hidden", "md:inline-block"], buttonStyles())}
-                  href="https://mychart.chppoc.org/rrl"
+                  href="https://mychart.chppoc.org/wsp"
                 >
                   Patient Portal Login &rarr;
                 </Link>
