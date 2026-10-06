@@ -17,7 +17,7 @@ export const Profile = (props: {
         />
       </div>
       <div className="prose leading-[1.5]">
-        <p className="no-prose font-bold text-xl mb-3">{props.name}</p>
+        <p className="not-prose font-bold text-xl mb-3">{props.name}</p>
         {props.children}
       </div>
     </div>
