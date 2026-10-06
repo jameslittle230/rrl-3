@@ -95,11 +95,14 @@ Images live in `public/images` and use plain `<img>` (no `next/image` in a stati
 
 ## Browser support
 
-- Mobile: the last 5 years of common mobile browsers (iOS Safari 15+, Chrome for Android, Samsung Internet), roughly Baseline 2021.
-- Desktop: current evergreen browsers only.
-- Newer features are fine as progressive enhancement if the page still works and reads correctly without them. Anything required for core functionality (navigation, reading content, contact info) must work on the mobile floor, via a fallback if needed.
-- Known gaps at the mobile floor: `<dialog>` needs iOS 15.4+, Popover needs iOS 17+, and invoker commands and `<dialog closedby>` are much newer still.
-- Tailwind v4 itself targets Safari 16.4+ (it relies on cascade layers, `@property` and `color-mix()`), which is above the iOS 15 floor.
+Based on GoatCounter data (October 2026): the oldest visitors are on iOS Safari 17.5 and Chrome 145.
+
+- iPhone: Safari 17+. This is the real floor for the site.
+- Android: current Chrome and Samsung Internet (they update through the Play Store regardless of Android version).
+- Desktop: current evergreen browsers.
+- Anything Safari 17 supports can be used without a fallback: `<dialog>`, Popover, `:has()`, container queries, WebP, and everything Tailwind v4 needs.
+- Newer features are fine as progressive enhancement if the page still works and reads correctly without them. Anything required for core functionality (navigation, reading content, contact info) must work in Safari 17, via a small fallback if needed. Prefer a few lines of JS over a polyfill.
+- Not in Safari 17, so they need a fallback or must be optional: invoker commands (`commandfor`), `<dialog closedby>`, `interpolate-size` / `calc-size()`, cross-document view transitions (Safari 18.2+).
 
 ## Web platform guidance
 
