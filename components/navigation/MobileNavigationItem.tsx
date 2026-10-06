@@ -5,7 +5,6 @@ import { NavItem } from "@/data/navigationItems";
 import { usePathname } from "next/navigation";
 import { Link } from "../Link";
 import { cva } from "class-variance-authority";
-import { isExternal } from "node:util/types";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
 import { buttonStyles } from "../Button";
 
