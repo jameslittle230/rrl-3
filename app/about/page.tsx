@@ -15,7 +15,7 @@ export default function Page() {
         <h1 className="mb-8">Our Pediatricians</h1>
       </div>
 
-      <Profile name="Sally S. Roth, MD" imageUrl="/images/roth.jpg">
+      <Profile name="Sally S. Roth, MD" imageUrl="/images/roth.jpg" loading="eager">
         Dr. Roth is a graduate of Smith College and Case Western Reserve Medical
         School. She trained at Yale New Haven Hospital, completed a fellowship
         in Ambulatory Pediatrics and was on the Pediatric Faculty at the

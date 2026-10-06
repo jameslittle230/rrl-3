@@ -11,6 +11,6 @@
 }
 
 .bg-address {
-  background: linear-gradient(to right, white, hsla(0, 0%, 0%, 0%)), url(/images/map.png) center/cover no-repeat;
+  background: linear-gradient(to right, white, hsla(0, 0%, 0%, 0%)), url(/images/map.webp) center/cover no-repeat;
 }
 

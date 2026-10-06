@@ -30,6 +30,9 @@ export default function Page() {
       <img
         className="w-full rounded-lg mb-6"
         src="/images/building-c.jpg"
+        width={600}
+        height={400}
+        fetchPriority="high"
         alt="An image of the facade of 637 Washington Street"
       />
       <div className="mb-6">

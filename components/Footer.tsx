@@ -13,12 +13,18 @@ const Footer = () => {
           <img
             className="inline max-w-[85px]"
             src="/images/pmch.png"
+            width={133}
+            height={121}
+            loading="lazy"
             alt="Drs. Roth, Laster, and Guenther are recognized by the NCQA as a patient-centered mediccal home."
             title="Drs. Roth, Laster, and Guenther are recognized by the NCQA as a patient-centered mediccal home."
           />
           <img
             className="inline max-w-[350px] w-full sm:w-64"
             src="/images/ppoc.jpg"
+            width={524}
+            height={138}
+            loading="lazy"
             alt="Drs. Roth, Laster, and Guenther are preferred Boston Children's Hospital Community of Care members."
             title="Drs. Roth, Laster, and Guenther are preferred Boston Children's Hospital Community of Care members."
           />
