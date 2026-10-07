@@ -22,11 +22,12 @@ const dmSerifDisplay = DM_Serif_Text({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://washingtonsquarepediatrics.com'),
+  metadataBase: new URL("https://washingtonsquarepediatrics.com"),
   alternates: { canonical: "/" },
   title: {
     template: "%s | Washington Square Pediatrics",
-    default: "Drs. Sally Roth, Susan Laster, and Cara Guenther",
+    default:
+      "Drs. Sally Roth, Susan Laster, Cara Guenther, and Shannon Fernandez-Ledon",
   },
   description: "Pediatricians in Brookline, MA",
 };
@@ -45,7 +46,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Header className="mb-4 md:mb-8" />
           <div className="block md:grid grid-cols-[max-content_1fr] gap-8">
             <Navigation />
-            <main className="w-full" id="content">{children}</main>
+            <main className="w-full" id="content">
+              {children}
+            </main>
           </div>
         </div>
         <Footer />

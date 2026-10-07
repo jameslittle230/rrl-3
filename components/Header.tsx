@@ -159,7 +159,10 @@ const Header = React.forwardRef<HTMLDivElement, HeaderProps>(
             <IconConfig uses={[headerIconStyles()]}>
               <span className={headerLinkStyles()}>
                 <Icon icon={<UserCircleIcon />} aria-label="Address" />
-                <span>Drs. Sally Roth, Susan Laster, and Cara Guenther</span>
+                <span>
+                  Drs. Sally Roth, Susan Laster, Cara Guenther, and Shannon
+                  Fernandez-Ledon
+                </span>
               </span>
               <Link href="https://maps.app.goo.gl/UBDnf2qYcMg2e23m8">
                 <Icon icon={<MapPinIcon />} aria-label="Address" />
